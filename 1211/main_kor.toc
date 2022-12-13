@@ -1,0 +1,22 @@
+\contentsline {section}{국문초록}{i}{}%
+\contentsline {section}{Abstract}{ii}{}%
+\contentsline {section}{서문}{iv}{}%
+\contentsline {section}{사사}{v}{}%
+\contentsline {section}{목차}{vi}{}%
+\contentsline {section}{표 목차}{vii}{}%
+\contentsline {section}{그림 목차}{viii}{}%
+\contentsline {section}{Nomenclature(or List of Symbols)}{x}{}%
+\contentsline {chapter}{\numberline {1}서론}{1}{}%
+\contentsline {section}{\numberline {1.1}절 제목}{1}{}%
+\contentsline {subsection}{\numberline {1.1.1}항 제목}{1}{}%
+\contentsline {chapter}{\numberline {2}학위논문의 양식}{2}{}%
+\contentsline {section}{\numberline {2.1}용지 크기, 여백 및 페이지 설정}{2}{}%
+\contentsline {section}{\numberline {2.2}Figures and Equations}{4}{}%
+\contentsline {section}{\numberline {2.3}Footnotes and Endnotes}{5}{}%
+\contentsline {section}{\numberline {2.4}직접인용}{5}{}%
+\contentsline {chapter}{\numberline {3}논의}{6}{}%
+\contentsline {chapter}{\numberline {4}결론}{7}{}%
+\contentsline {chapter}{참고문헌}{7}{}%
+\contentsline {chapter}{부록}{8}{}%
+\contentsline {section}{A. 부록 제목}{9}{}%
+\contentsline {chapter}{색인}{9}{}%

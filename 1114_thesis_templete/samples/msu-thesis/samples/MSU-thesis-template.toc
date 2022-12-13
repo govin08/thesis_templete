@@ -1,0 +1,12 @@
+\contentsline {chapter}{List of Tables}{vi}{}%
+\contentsline {chapter}{List of Figures}{vii}{}%
+\contentsline {chapter}{\chapternumberline {1}Your first chapter}{1}{}%
+\cftinsert {APP}
+\contentsline {chapter}{Appendix}{2}{}%
+\cftinsert {APPENDICES}
+\changetocdepth {-1}
+\contentsline {appendix}{\chapternumberline {A}Your appendix}{3}{}%
+\cftinsert {CHAPAPPR}
+\cftinsert {BIB}
+\changetocdepth {3}
+\contentsline {chapter}{Bibliography}{4}{}%

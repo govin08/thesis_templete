@@ -1,0 +1,418 @@
+\documentclass[11pt]{report}
+%\usepackage{amscd,epsfig,longtable}
+%\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, mathrsfs}
+\usepackage{geometry, graphicx, kotex, tabularx, verbatim, setspace, url}
+\usepackage[table]{xcolor}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+\usepackage{indentfirst}
+\geometry{paper=b5paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+
+%\numberwithin{figure}{chapter}
+\numberwithin{figure}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\protect\theoremname}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\protect\definitionname}
+\theoremstyle{corollary}
+\newtheorem{corollary}[theorem]{\protect\corollaryname}
+\theoremstyle{definition}
+\newtheorem{rem}[theorem]{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{\protect\propositionname}
+\theoremstyle{definition}
+\newtheorem{claim}[theorem]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{\protect\lemmaname}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\examplename}{Claim}
+\providecommand{\definitionname}{Definition}
+\providecommand{\corollaryname}{Corollary}
+
+\begin{document}
+\onehalfspacing
+\renewcommand{\arraystretch}{1.5}
+
+\newpage
+\centering
+\pagenumbering{gobble} % Cover page, title page and signature page) should not be numbered.
+\Large 석(박) 사 학 위 논 문
+\par\vspace{3cm} % 3cm spacing
+\huge 학위 논문 제목
+\par\vspace{0.3cm}\Large - 부제가 있을 경우 중앙에 위치
+\par\vspace{4.7cm} % spacing can be adjusted
+\LARGE 고 려 대 학 교 ~ 대 학 원
+\par\vspace{0.5cm}
+\Large OOO 학과
+\par\vspace{0.5cm}
+\Large 홍 길 동
+\par\vspace{3cm}
+\large 2023년 2월
+
+\newpage
+~
+% Blank page should be inserted after the cover page.
+
+
+\newpage
+\Large 김 철 수 ~ 교 수 지 도
+\par\vspace{0.5cm}
+\Large 석(박) 사 학 위 논 문
+\par\vspace{2cm}
+\huge 학위 논문 제목
+\par\vspace{0.3cm}\Large - 부제가 있을 경우 중앙에 위치
+\par\vspace{2cm} % spacing can be adjusted
+\Large 이 논문을 O학 석(박)사학위 논문으로 제출함
+\par\vspace{2cm}
+\large 2022년 10월
+\par\vspace{2cm}
+\LARGE 고 려 대 학 원 ~ 대 학 원
+\par\vspace{0.5cm}
+\Large OOO 학과
+\par\vspace{1cm}
+\Large 홍길동
+\par\vspace{1.0cm}
+\rule{.6\textwidth}{0.4pt} % Student's signature is required on the line
+
+\newpage % For Master's Degree only
+\par\vspace{1cm}
+\Large 홍길동의 O학 석(박)사학위논문 심사를 완료함
+\par\vspace{2.5cm}
+\Large 20OO년 O월
+\par\vspace{2cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+\Large 위원장 : OOO 교수
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+위원 : OOO 교수
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+위원 : OOO 교수
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+위원 : OOO 박사
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+위원 : OOO 박사
+
+\newpage
+\newgeometry{paper=b5paper, left=20mm, right=20mm, top=30mm, bottom=30mm}
+% From the abstract on, the top and bottom margins shall be at least 3cm and the left and right margins shall be at least 2 cm.
+\pagenumbering{roman}
+%페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다.
+\begin{center}
+\LARGE 국문 제목
+\par\vspace{20pt}
+\normalsize 홍 길 동\par
+O O O 학 과\par
+지도교수: 김 철 수
+
+\par\vspace{20pt}
+\addcontentsline{toc}{section}{국문초록}
+\section*{국문초록}
+
+\end{center}
+\normalsize
+국문 학위논문의 초록은 국문, 영문의 순서로 작성하며, 영문 학위논문의 초록은 영문, 국문의 순서로 작성하며, 학위논문을 기타 외국어로 작성하는 경우 초록은 기타 외국어, 영문, 국문의 순서로 작성한다.
+
+초록에는 논문제목, 성명, 학과, 지도교수를 기재하며 초록 하단에 주요어(keywords)를 표기한다. 
+
+\par\vspace{100pt}
+
+\textbf{중심어} : 중심어, 중심어, 중심어, 중심어, 중심어, 중심어
+
+\newpage
+\begin{center}
+\LARGE Title
+\par\vspace{20pt}
+\doublespacing
+\normalsize by Gildong Hong\par
+Department of OOOO\par
+under the supervision of Professor Chulsu Kim
+
+\par\vspace{20pt}
+\addcontentsline{toc}{section}{Abstract}
+\section*{Abstract}
+\end{center}
+
+\justifying % this command available with \usepackage{ragged2e}
+\doublespacing
+\normalsize
+The text of the abstract begins here. 
+\par\vspace{10pt}
+
+\textbf{Keywords} : Keyword, Keyword, Keyword, Keyword, Keyword, Keyword
+
+\newpage
+~
+\vspace{5.5cm} \par
+\begin{center}
+감사의 글은 필요한 경우 작성한다.\par
+감사의 글 작성시, 페이지 중앙에 위치하도록 한다.\par
+감사의 글(Dedication) 제목은 생략하여 목차에 표현하지 않는 것이 일반적이다.
+\end{center}
+
+\newpage
+\begin{center}
+\addcontentsline{toc}{section}{서문}
+\section*{서문}
+\end{center}
+
+\normalsize
+학위논문에 다른 사람들과 협력하여 수행된 결과가 포함되거나, 저자가 출판한 내용이 포함되는 경우, 이와 관련된 내용을 서문에 작성하여야 한다. 서문에는 아래의 내용이 포함될 수 있다. 다만, 서문을 따로 작성하지 않고, 관련 사항을 본문의 서론에서 언급하는 것도 가능하다. \par
+
+① 다른 사람들과 협력하여 수행한 작업에 대한 다른 사람의 기여도와 비율 및 저자가 독창적이라고 주장하는 부분에 대한 설명\par
+② 논문의 일부분이 이미 출판되었거나 준비 중인 부분에 대한 설명 및 출판물에 대한 모든 사람의 기여\par
+③ 이외에도 논문작성 관련 개인적 상황 및 정보(personal information), 주제 선택 동기(motivation), 저자 관점, 감사 및 사사(acknowledgments) 등의 내용이 포함될 수 있다.\par
+
+\bigskip
+서문 작성 예
+\begin{itemize}
+\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+\end{itemize}
+
+\newpage
+\begin{center}
+\addcontentsline{toc}{section}{사사}
+\section*{사사}
+\end{center}
+
+\normalsize
+필요한 경우 사사를 작성한다. \par
+서문(Preface)에서 사사(acknowledgments)와 관련된 내용을 기술한 경우, 생략할 수 있다.
+
+\newpage
+\renewcommand*\contentsname{목차}
+\addcontentsline{toc}{section}{목차}
+\tableofcontents
+
+% 위의 목차는 모든 장, 절, 항 제목에 대해 자동적으로 생성된다.
+% 페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다. 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2, 3...)를 사용한다.
+% 본문의 장은 아라비아 숫자(1, 2, 3, 4...), 부록은 영문 알파벳(A, B, C...)을 사용하여 구분하는 것이 일반적이다.
+
+
+\renewcommand{\listtablename}{표 목차}
+\addcontentsline{toc}{section}{표 목차}
+\listoftables
+
+% 위의 표 목차는 table 환경의 모든 표 제목에 대해 자동적으로 생성된다.
+% 본문에 표가 포함되는 경우 반드시 표 목차를 작성한다. 본문을 한글로 작성하더라도 표 제목는 영어로 작성 가능하다. 표는 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+\renewcommand{\listfigurename}{그림 목차}
+\addcontentsline{toc}{section}{그림 목차}
+\listoffigures
+
+% 위의 그림 목차는 figure 환경의 모든 그림 제목에 대해 자동적으로 생성된다.
+% 본문에 그림이 포함되는 경우 반드시 그림 목차를 작성한다. 본문을 한글로 작성한 경우에도 그림 제목는 영어로 작성 가능하다. 그림은 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+\newpage
+\begin{center}
+\addcontentsline{toc}{section}{Nomenclature(or List of Symbols)}
+\section*{Nomenclature(or List of Symbols)}
+\end{center}
+\normalsize
+\begin{tabular}{p{.2\textwidth}p{.7\textwidth}}
+$M$	& original mass matrix\\
+$K$	& original stiffness matrix\\[30pt]
+\multicolumn{2}{l}{Subscripts}\\
+$b$ & interface boundary\\
+$d$ & dominant\\[30pt]
+\multicolumn{2}{l}{Abbreviation}\\
+$CMS$ & Component Mode Synthesis\\
+\end{tabular}
+%필요한 경우 기호설명을 작성한다. 기호 설명에는 필요한 경우 첨자 설명 및 약어 설명을 포함한다. 본문을 한글로 작성한 경우에도 기호 설명은 영어로 작성 가능하다.
+
+\newpage 
+\ % 본문 앞에는 빈페이지를 둔다. 
+\pagenumbering{gobble} % Blank page should not be numbered.
+
+%%%
+\chapter{서론}\label{chap:intro}
+\pagenumbering{arabic}
+
+장(chapter)을 만들기 위해 \verb|\chapter{서론}|을 사용하였다.
+이 장을 라벨링 하기 위해서는 \verb|\label{chap:intro}|와 같은 명령어를 사용할 수 있다.
+
+%%
+\section{절 제목}\label{sec:section}
+절(section)을 만들기 위해 \verb|\section{절 제목}|을 사용하였다.
+이 절을 라벨링 하기 위해서는 \verb|\label{sec:section}|와 같은 명령어를 사용할 수 있다.
+이 템플릿에서 제공하는 장, 절, 항의 양식은 하나의 예시일 뿐이다.
+따라서 이 양식을 꼭 따라야 할 필요는 없다.
+
+%
+\subsection{항 제목}\label{subs:subsection}
+항(subsection)을 만들기 위해 \verb|\subsection{항 제목}|을 사용였다.
+이 항을 라벨링 하기 위해서는 \verb|\label{subs:subsection}|와 같은 명령어를 사용할 수 있다.
+
+장, 절, 항들은 목차에 자동적으로 표시된다.
+
+%%%
+\chapter{학위논문의 양식}\label{chap:organizing}
+
+%%
+\section{용지 크기, 여백 및 페이지 설정} \label{sec:papersize}
+논문의 규격은 4·6배판(B5)로 하는 것을 원칙으로 한다.
+
+논문 표지, 속표지, 심사완료검인서의 아래쪽, 위쪽, 오른쪽, 왼쪽의 여백은 3cm 이상으로 한다. 초록부터 페이지 여백은 아래쪽, 위쪽, 3cm 이상 오른쪽, 왼쪽 2cm 이상으로 한다.
+
+페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용하며, 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2 , 3...)를 사용한다.
+
+표는 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다. (Table \ref{tab:Organizing and formatting}).
+
+\renewcommand\tablename{표}
+\begin{table}
+\caption{학위논문의 순서와 양식}
+\label{tab:Organizing and formatting}
+\vspace{0.5cm}
+\begin{tabular}{ m{7cm} m{3cm} m{2cm}}
+\hline
+순서(비고) & 여백설정& 페이지설정\\\hline
+논문표지, 빈페이지, 속표지, 심사완료검인서  &	 위, 아래, 왼쪽 오른쪽 모두 3 cm 이상	&	없음\\\hline
+국문 및 영문 초록 , 서문(필요시), 사사(선택), 목차, 표 목차 (본문에 표가 있는 경우), 그림 목차 (본문에 그림이 있는 경우), 기호설명(선택)	& 위, 아래 3cm 이상, 왼쪽, 오른쪽 2cm 이상  &  i, ii, iii...         \\\hline		
+빈 페이지 & 위와 같음 & 없음\\\hline
+본문, 참고문헌, 부록(선택), 색인(선택) & 위와 같음 & 1,2,3...	\\\hline
+
+\end{tabular}
+\end{table}
+
+%%
+
+\begin{table}\centering
+\caption{Fonts setting used in this document}
+\vspace{0.5cm}
+\begin{tabular}{  m{7cm}  m{5cm} }
+\hline 				&     \LaTeX{} Command \\\hline 
+논문제목				& huge \\
+학교이름(고려대학교)	& LARGE \\
+연, 월, 				& large\\
+기타 내용 (학과명, 이름, 지도교수, \(\cdots\), 제출함, \(\cdots\), 완료함,등)	& Large\\
+본문					& normalsize	\\
+장 제목   			& chapter \\
+절 제목				& section \\
+항 제목				& subsection \\\hline
+
+\end{tabular}
+\end{table}
+
+
+
+%%
+\newpage
+\section{Figures and Equations}\label{sec:figures_and_equations}
+
+그림을 삽하기 위해서는 \texttt{includegraphics}와 같은 명령어를 사용할 수 있으며, 이 명령어를 사용하기 위해서는 \texttt{graphicx} 패키지가 필요하다.
+\texttt{includegraphics} 명령은 \texttt{figure} 환경 안에 넣는 것이 바람직하다.
+\texttt{figure} 환경에 포함된 모든 그림들은 `그림 목록'에 포함된다.
+
+\renewcommand\figurename{그림}
+\begin{figure}
+\begin{center}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{center}
+\caption{고려대 심벌}
+\end{figure}
+
+\begin{equation}
+E=mc^2
+\end{equation}
+위의 식번호는, 해당 수식이 두번째 장의 첫번째 수식임을 나타내고 있다.
+식을 하나 더 입력하면, 이것은 두번째 장의 두번째 수식임을 표시할 것이다 ;
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+
+여러 개의 수식을 입력할 때, 각각의 수식들에 대해 식번호를 부여할 수도 있고
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align}
+아니면, 연립방정식 전체에 대하여 식번호를 하나 부여할 수도 있다.
+\begin{equation}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{aligned}
+\end{equation}
+
+\section{Footnotes and Endnotes}\label{sec:footnotes_endnotes}
+
+각주는 논문 내용에 대한 부가적인 설명을 제공하기 위하여 삽입할 수 있다.
+수평선을 경계로 본문의 밑에 분리되어 있으며, 해당 단어에 달린 각주번호를 통해 주석의 내용을 참조할 수 있도록 되어 있다.
+
+\section{직접인용}\label{sec:quotation}
+저자의 의도를 독자에게 효율적으로 전달하기 위해서는, 가끔 직접인용이 필요한 경우가 있다.\par
+\bigskip
+
+\leftskip 1.5cm
+\rightskip 1.5cm 
+
+“Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.” the universe.” \par
+― Albert Einstein 
+
+\leftskip 0cm
+\rightskip 0cm 
+
+%%%
+\chapter{논의}\label{chap:discussion}
+The discussion starts here.
+
+%%%
+\chapter{결론}\label{chap:conclusion}
+The conclusion starts here. \par
+
+
+
+\begin{center}
+\addcontentsline{toc}{chapter}{참고문헌} % or Bibliography
+\chapter*{참고문헌} % or Bibliography
+\end{center}
+
+\normalsize
+본문 뒤에는 참고문헌(References) 또는 서지(Bibliography)를 작성한다.\par
+참고문헌(References)은 본문에서 인용되거나 참고한 자료를 작성한 목록을 말한다. 서지(Bibliography)는 엄밀한 의미에서 참고문헌(References) 뿐만 아니라 음반, 면담, 영화, TV프로그램, 그림 등 비문자 자료를 모두 포괄한다. \par
+참고문헌은 서지관리 프로그램(Endnote, Mendeley 등)을 사용하여 학문분야 특성에 맞게 저자 이름순 혹은 인용순 등으로 일관된 양식으로 작성한다.
+
+
+\bigskip
+
+서지관리 프로그램 링크
+\begin{itemize}
+\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+\end{itemize}
+
+\begin{center}
+\addcontentsline{toc}{chapter}{부록} % or Supplementary Materials
+\chapter*{부록} % or Supplementary Materials
+\end{center}
+
+\normalsize
+\addcontentsline{toc}{section}{A. 부록 제목} 
+\section*{A. 부록 제목} % or Supplementary Materials
+필요한 경우 부록(appendices or supplementary materials)을 작성한다.
+부록의 각 장은 영문 알파벳을 사용하여 구분하는 것이 일반적이다.
+
+\begin{center}
+\addcontentsline{toc}{chapter}{색인}
+\chapter*{색인}
+
+\end{center}
+\normalsize
+필요한 경우 색인(index)을 작성한다.
+
+
+\end{document}
+

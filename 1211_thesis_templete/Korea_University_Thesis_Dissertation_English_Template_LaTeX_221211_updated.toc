@@ -1,0 +1,20 @@
+\contentsline {chapter}{Abstract}{i}{}%
+\contentsline {chapter}{Preface}{v}{}%
+\contentsline {chapter}{Acknowledgement}{vi}{}%
+\contentsline {chapter}{Nomenclature (or list of symbols)}{x}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{2}{}%
+\contentsline {section}{\numberline {1.1}Second Level Heading}{2}{}%
+\contentsline {subsection}{\numberline {1.1.1}Third Level Heading}{2}{}%
+\contentsline {section}{\numberline {1.2}Referencing headings}{2}{}%
+\contentsline {chapter}{\numberline {2}Organizing and Formatting}{3}{}%
+\contentsline {section}{\numberline {2.1}Paper Size and Margins}{3}{}%
+\contentsline {section}{\numberline {2.2}Fonts and Size}{4}{}%
+\contentsline {section}{\numberline {2.3}Figures and Equations}{4}{}%
+\contentsline {section}{\numberline {2.4}Quotation}{6}{}%
+\contentsline {chapter}{\numberline {3}Discussion}{7}{}%
+\contentsline {chapter}{\numberline {4}Conclusion}{8}{}%
+\contentsline {chapter}{Bibliography}{8}{}%
+\contentsline {chapter}{Appendix}{9}{}%
+\contentsline {chapter}{\numberline {A}The first appendix}{10}{}%
+\contentsline {chapter}{\numberline {B}The second appendix}{11}{}%
+\contentsline {chapter}{Index}{11}{}%

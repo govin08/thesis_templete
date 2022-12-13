@@ -1,0 +1,512 @@
+\documentclass[11pt]{report}
+%\usepackage{amscd,epsfig,longtable}
+%\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, mathrsfs}
+\usepackage{geometry, graphicx, kotex, tabularx, verbatim, setspace, url}
+\usepackage[table]{xcolor}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+\usepackage{indentfirst}
+\geometry{paper=b5paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+
+%\numberwithin{figure}{chapter}
+\numberwithin{figure}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\protect\theoremname}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\protect\definitionname}
+\theoremstyle{corollary}
+\newtheorem{corollary}[theorem]{\protect\corollaryname}
+\theoremstyle{definition}
+\newtheorem{rem}[theorem]{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{\protect\propositionname}
+\theoremstyle{definition}
+\newtheorem{claim}[theorem]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{\protect\lemmaname}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\examplename}{Claim}
+\providecommand{\definitionname}{Definition}
+\providecommand{\corollaryname}{Corollary}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\begin{document}
+\onehalfspacing
+\renewcommand{\arraystretch}{1.5}
+
+\newpage % For Master's Degree only
+\centering
+\pagenumbering{gobble} % Cover page, title page and signature page) should not be numbered.
+\Large Master's Thesis  
+\par\vspace{3cm} % 3cm spacing
+\huge Title of Thesis Title of Thesis Title of Thesis Title of Thesis Title of Thesis  Title of Thesis  Title of Thesis
+\par\vspace{4.7cm} % spacing can be adjusted
+\Large Gildong Hong
+\par\vspace{0.5cm}
+\Large Department of OOO 
+\par\vspace{1.5cm}
+\LARGE Graduate School 
+\par\vspace{0.5cm}
+\LARGE Korea University 
+\par\vspace{1cm}
+\large February 2023 
+
+\newpage % For Doctoral Degree only
+\noindent
+\Large Doctoral Dissertation  
+\par\vspace{3cm} % 3cm spacing
+\huge Title of Dissertation Title of Dissertation Title of Dissertation Title of Dissertation Title of Dissertation 
+\par\vspace{4.7cm} % spacing can be adjusted
+\Large Gildong Hong
+\par\vspace{0.5cm}
+\Large Department of OOO 
+\par\vspace{1.5cm}
+\LARGE Graduate School 
+\par\vspace{0.5cm}
+\LARGE Korea University 
+\par\vspace{1cm}
+\large February 2023 
+
+\newpage
+~
+% Blank page should be inserted after the cover page.
+
+
+\newpage % For Master's Degree only
+\huge Title of Thesis Title of Thesis Title of Thesis Title of Thesis Title of Thesis  
+\par\vspace{3cm} % spacing can be adjusted
+\Large by\\
+Gildong Hong
+\par\vspace{1.0cm}
+\rule{.6\textwidth}{0.4pt} % Student's signature is required on the line
+\par\vspace{0.7cm}
+under the supervision of Professor Chulsu Kim
+\par\vspace{0.7cm}
+A thesis submitted in partial fulfillment of \par
+the requirements for the degree of \par
+Master of Arts (or Science)  
+\par\vspace{10pt}
+\Large Department of OOO 
+\par\vspace{1.5cm}
+\LARGE Graduate School 
+\par\vspace{0.5cm}
+\LARGE Korea University 
+\par\vspace{1cm}
+\large October 2022
+
+\newpage % For Doctoral Degree only
+\huge Title of Dissertation Title of Dissertation Title of Dissertation Title of Dissertation  
+\par\vspace{1.5cm} % spacing can be adjusted
+\Large by\\
+Gildong Hong
+\par\vspace{1.0cm}
+\rule{.6\textwidth}{0.4pt} % Student's signature is required on the line
+\par\vspace{0.7cm}
+under the supervision of Professor Chulsu Kim
+\par\vspace{0.7cm}
+A dissertation submitted in partial fulfillment of \par
+the requirements for the degree of \par
+Doctor of Philosophy  
+\par\vspace{10pt}
+\Large Department of OOO 
+\par\vspace{1.5cm}
+\LARGE Graduate School 
+\par\vspace{0.2cm}
+\LARGE Korea University 
+\par\vspace{1cm}
+\large October 2022
+
+\newpage % For Master's Degree only
+\Large
+The thesis of Gildong Hong has been approved \par
+by the thesis committee in partial fulfillment\par
+of the requirements for the degree of \par
+Master of Arts (or Science)  
+\par\vspace{1cm}
+\large December 2022
+\par\vspace{3cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+\Large
+Committee Chair: Name
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+Committee Member: Name
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+Committee Member: Name 
+
+\newpage
+\begin{center}
+\Large
+The dissertation of Gildong Hong has been approved \par
+by the dissertation committee in partial fulfillment\par
+of the requirements for the degree of \par
+Doctor of Philosophy  
+\par\vspace{1cm}
+\large December 2022
+\par\vspace{2cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+\Large
+Committee Chair: Name
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+Committee Member: Name
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+Committee Member: Name 
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+Committee Member: Name 
+\par\vspace{1cm}
+\rule{.6\textwidth}{0.4pt}\par % committee's signature above the line 
+Committee Member: Name 
+\par\vspace{1cm} % delete this line if not required
+\end{center}
+
+\newpage
+\newgeometry{paper=b5paper, left=20mm, right=20mm, top=30mm, bottom=30mm}
+% From the abstract on, the top and bottom margins shall be at least 3cm and the left and right margins shall be at least 2 cm.
+\pagenumbering{roman}  
+% The preliminary pages (abstract, dedication, preface, acknowledgments, table of contents, list of tables, list of figures, nomenclature) should be assigned using small Roman numerals (i, ii, iii, iv, v, etc.). 
+\begin{center}
+\LARGE Title
+\par\vspace{20pt}
+\doublespacing
+\normalsize by Gildong Hong\par
+Department of OOOO\par
+under the supervision of Professor Chulsu Kim
+
+\par\vspace{20pt}
+\addcontentsline{toc}{section}{Abstract}
+\section*{Abstract}
+\end{center}
+
+\justifying % this command available with \usepackage{ragged2e}
+\doublespacing
+\normalsize
+The text of the abstract begins here. 
+Pages should be assigned from the abstract using small Roman numericals (i, ii, iii, iv, v, etc.)
+\par\vspace{10pt}
+
+\textbf{Keywords} : Keyword, Keyword, Keyword, Keyword, Keyword, Keyword
+
+\newpage
+\begin{center}
+\LARGE 국문 제목
+\par\vspace{20pt}
+\normalsize 홍 길 동\par
+O O O 학 과\par
+지도교수: 김 철 수
+
+\par\vspace{20pt}
+\addcontentsline{toc}{section}{국문초록}
+\section*{국문초록}
+
+\end{center}
+\normalsize
+The Korean abstract should follow the English abstract. \par
+영어 논문의 경우에도 한글 초록이 작성되어야 합니다.
+
+The abstract should be written in both Korean and English.
+In addition, a thesis/dissertation written in a foreign language other than English must include the abstract in the relevant foreign language, English and Korean. 
+
+\par\vspace{100pt}
+
+\textbf{중심어} : 중심어, 중심어, 중심어, 중심어, 중심어, 중심어
+
+\newpage
+~
+\vspace{5.5cm} \par
+\begin{center}
+You can dedicate your thesis/dissertation  \par 
+to someone you know either personally or professionally. \par
+It is customary to place the dedication text \par
+in the center of the page without a title heading. \par
+If you do not need this page, delete it.
+\end{center}
+
+\newpage
+\begin{center}
+\addcontentsline{toc}{section}{Preface}
+\section*{Preface}
+\end{center}
+
+\normalsize
+The text of the preface begins here. 
+
+If the thesis/dissertation contains the results of work conducted in collaboration with other people, or if the thesis/dissertation contains previously published content, a preface must be included. The preface may include the following. However, it is also possible to include the contents of the preface in the introduction of the main body.\par
+
+① a description of the results that were obtained in collaboration with others, indicating the nature and proportion of the contribution of others and in general terms the portions of the work which the student claims as original \par
+② a description of contents that have been published or submitted for publication and the contributions of all authors involved in any multi-authored publications included in the thesis/dissertation \par
+③ your brief personal background, academic motivation, thesis/dissertation target group, acknowledgments, etc. can be included 
+
+\bigskip
+Example
+\begin{itemize}
+\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+\end{itemize}
+
+\newpage
+\begin{center}
+\addcontentsline{toc}{section}{Acknowledgments}
+\section*{Acknowledgments}
+\end{center}
+
+\normalsize
+If necessary, the text of the acknowledgments begins here. \par
+If the Acknowledgments are mentioned in the preface, this section may be omitted. \par
+
+\newpage
+\renewcommand*\contentsname{Table of Contents}
+\addcontentsline{toc}{section}{Table of Contents}
+\tableofcontents
+
+%The table of contents starts with the abstract. 
+%The preliminary pages (abstract, dedication, preface, acknowledgments, table of contents, list of tables, list of figures, nomenclature) should be assigned using small Roman numerals (i, ii, iii, iv, v...). The other preliminary pages (cover page, title page and signature page) should not be numbered. For the main body, use Arabic numbers (1, 2, 3, 4, 5...) starting with page 1.
+%It is customary to use Arabic numbers (1, 2, 3, 4, 5...) for the chapters in the main body and capital letters (A, B, C...) for the sections in the appendices.
+
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+
+%A list of tables shall be included when there are tables in the thesis/dissertation. Table numbering can be continuous throughout the thesis/dissertation or by chapter (e.g., 1.1, 1.2, 2.1, 2.2...).
+
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+
+%List of figures should be prepared when figures are included in the thesis/dissertation. Figure numbering can be be continuous throughout the thesis/dissertation or by chapter (e.g., 1.1, 1.2, 2.1, 2.2...).
+
+\newpage
+\begin{center}
+\addcontentsline{toc}{section}{Nomenclature(or List of Symbols)}
+\section*{Nomenclature(or List of Symbols)}
+\end{center}
+\normalsize
+\begin{tabular}{p{.2\textwidth}p{.7\textwidth}}
+$M$	& original mass matrix\\
+$K$	& original stiffness matrix\\[30pt]
+\multicolumn{2}{l}{Subscripts}\\
+$b$ & interface boundary\\
+$d$ & dominant\\[30pt]
+\multicolumn{2}{l}{Abbreviation}\\
+$CMS$ & Component Mode Synthesis\\
+\end{tabular}
+%If nomenclature or list of symbols is used, a section describing subscripts and abbreviations can be included.
+\newpage 
+\ % A blank page should be inserted before the main body. 
+\pagenumbering{gobble} % Blank page should not be numbered.
+
+
+%%%
+\chapter{Introduction}\label{chap:intro}
+\pagenumbering{arabic}
+
+The following formatting information is intended to illustrate several acceptable ways of preparing a thesis or dissertation for your convenience.
+
+The first level heading is styled using chapter.
+Chapter 1 is styled with\\ \verb|\chapter{Introduction}|.
+You can put \verb|\label{chap:intro}| to refer to this chapter.
+
+
+
+%%
+\section{Second Level Heading}\label{sec:section}
+The second level subheading is styled using section.
+Section 1.1 is styled with \verb|\section{Second Level Heading}|.
+You can put \verb|\label{sec:section}| to refer to this section. \par
+This template isn't the only way to list titles, subheadings, numbering, etc. It's just one example that may work for you and it is not mandatory or even recommended.
+%
+\subsection{Third Level Heading}\label{subs:subsection}
+The above third level subheading is styled using subsection.
+Subsection 1.1.1 is styled with \verb|\subsection{Third Level Heading}|.
+You can put \\\verb|\label{subs:subsection}| to refer to this subsection.
+
+It will appear in the Table of Contents, automatically.
+
+%%%
+\chapter{Organizing and Formatting}\label{chap:organizing}
+
+%%
+\section{Paper Size, Margins and Fonts} \label{sec:papersize}
+The paper size of the thesis/dissertation shall be B5.
+For the first three preliminary pages (including the cover page, title page and signature page) before the abstract, all margins (top, bottom, left and right) shall be at least 3 cm.
+From the abstract on, the top and bottom margins shall be at least 3cm and the left and right margins shall be at least 2 cm.
+
+
+
+\begin{table}
+\caption{Organizing and formatting thesis/dissertation}
+\vspace{0.5cm}
+\begin{tabular}{ m{7cm} m{3cm} m{2cm}}
+\hline
+Order(Note) & Margin & Pagination \\\hline
+Cover page, Blank page, Title page,    Signature page   &	 top, bottom, left  and right at least 3 cm	&	None \\\hline
+Abstract(both English Korean), Preface(if necessary), Acknowledgments(optional), Table of contents, List of tables (if any), List of figures (if any), Nomenclature (or List of symbols, optional)	& top, bottom at least 3 cm and left, right at least 2 cm  &  i, ii, iii...         \\\hline		
+Blank page & same as above  & None \\\hline
+Main body, References (or Bibliography), Appendices (optional), Index(optional) & same as above  & 1,2,3...	\\\hline
+
+\end{tabular}
+\end{table}
+
+%%
+
+\begin{table}\centering
+\caption{Fonts setting used in this document}
+\vspace{0.5cm}
+\begin{tabular}{  m{9cm}  m{3cm} }
+\hline
+               &     \LaTeX{} Command \\\hline 
+Thesis title	& huge \\
+The school name (Graduate School, Korea University) & LARGE \\
+Year, month and day	& large\\
+All other parts are 16 points (department, name, advisor, master's thesis, ...submitted, ...completed, etc.)	& Large\\
+Main text & normalsize	\\
+Chapter title(1st level heading)   & chapter \\
+Section title(2nd level heading)  & section \\
+Subsection title(3rd level heading) & subsection \\\hline
+
+\end{tabular}
+\end{table}
+
+
+
+%%
+\newpage
+\section{Figures and Equations}\label{sec:figures_and_equations}
+
+To include the figure file in the document, you can use \texttt{includegraphics} command, which requires \texttt{graphicx} package.
+It is desirable to cover the \texttt{includegraphics} command inside the \texttt{figure} environment.
+All figures in the \texttt{figure} environment will be included in the `List of Figures`.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{center}
+\caption{Korea University Global Symbol}
+\end{figure}
+
+\begin{equation}
+E=mc^2
+\end{equation}
+The tag of the above equation reads the first equation of the section \ref{sec:figures_and_equations}
+You can also specify the tagging explicitly by
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+
+You may tag the equations separately as follows.
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align}
+
+Or you may tag the system of equations as following.
+
+\begin{equation}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{aligned}
+\end{equation}
+
+\section{Footnotes and Endnotes}\label{sec:footnotes_endnotes}
+
+Footnotes\footnote{The usage of footnotes is different or limited depending on the field of study. The usage of footnotes is recommended only when you’re sure how a footnote should be used in your field.} can be included to provide additional information about the content. Footnotes should be placed at the bottom of the page separated from the text by a solid line and is referenced through a superscript number.
+
+\section{Direct Quotation}\label{sec:quotation}
+Direct quotations are sometimes necessary to truly convey the author's meaning to the reader. \par
+\bigskip
+
+\leftskip 1.5cm
+\rightskip 1.5cm 
+
+“Learn from yesterday, live for today, hope for tomorrow. The important thing is not to stop questioning.” the universe.” \par
+― Albert Einstein 
+
+\leftskip 0cm
+\rightskip 0cm 
+
+%%%
+\chapter{Discussion}\label{chap:discussion}
+The discussion starts here.
+
+%%%
+\chapter{Conclusion}\label{chap:conclusion}
+The conclusion starts here. \par
+
+
+
+\begin{center}
+\addcontentsline{toc}{chapter}{References} % or Bibliography
+\chapter*{References} % or Bibliography
+\end{center}
+
+\normalsize
+The reference starts here. \par
+References are a detailed list of sources that are cited in your thesis/dissertation. A bibliography is a detailed list of references cited in your thesis/dissertation plus background or other material you have read but have not actually cited.
+
+References should be prepared in a consistent format using bibliographic management tools (Endnote, Mendeley, etc.) in the order of author name or citation according to your academic field.
+
+\bigskip
+
+Bibliographic management tools
+\begin{itemize}
+\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+\end{itemize}
+
+\begin{center}
+\addcontentsline{toc}{chapter}{Appendices} % or Supplementary Materials
+\chapter*{Appendices} % or Supplementary Materials
+\end{center}
+
+\normalsize
+\addcontentsline{toc}{section}{A. Appendix Title} 
+\section*{A. Appendix Title} % or Supplementary Materials
+The appendix starts here if required. \par
+It is customary to use capital letters (A, B, C...) for the sections in the appendices. 
+
+% Appendices or supplementary materials are optional.
+% It is customary to use capital letters (A, B, C...) for the sections in the appendices.
+
+\begin{center}
+\addcontentsline{toc}{chapter}{Index}
+\chapter*{Index}
+
+\end{center}
+\normalsize
+Index starts here if required.
+
+
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\begin{thebibliography}{AA}
+%\bibitem {ACC} C. Adams, M. Chu, T. Crawford, S. Jensen, K. Siegel and L. Zhang,
+%    {\em Stick index of knots and links in the cubic lattice},
+%    J. Knot Theory Ramif. \textbf{21} (2012) 1250041.
+%
+%
+%
+%\end{thebibliography}
+
+
+
+%\addcontentsline{toc}{chapter}{Bibliography}
+%
+%\bibliographystyle{abbrv}
+%\bibliography{reference.bib}
+
+
+\end{document}
+

@@ -1,0 +1,711 @@
+\documentclass[11pt]{report}
+%\usepackage{amscd,epsfig,longtable}
+%\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, mathrsfs}
+\usepackage{geometry, graphicx, kotex, tabularx, verbatim, setspace,url}
+\usepackage[table]{xcolor}
+\usepackage{lipsum}
+\geometry{paper=b5paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+
+%\numberwithin{figure}{chapter}
+\numberwithin{figure}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\protect\theoremname}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\protect\definitionname}
+\theoremstyle{corollary}
+\newtheorem{corollary}[theorem]{\protect\corollaryname}
+\theoremstyle{definition}
+\newtheorem{rem}[theorem]{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{\protect\propositionname}
+\theoremstyle{definition}
+\newtheorem{claim}[theorem]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{\protect\lemmaname}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\examplename}{Claim}
+\providecommand{\definitionname}{Definition}
+\providecommand{\corollaryname}{Corollary}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\begin{document}
+\onehalfspacing
+\renewcommand{\arraystretch}{1.5}
+
+\begin{center}
+\large 논문 표지 (Cover page)
+\end{center}
+논문 표지는 국문논문의 경우 한글, 외국어 논문의 경우 외국어로 작성할 수 있다.
+단, 국문논문의 경우 효과적인 의미전달을 위해 한자(漢字)를 혼용할 수 있다.
+
+논문 표지, 속표지, 심사완료검인서의 아래쪽, 위쪽, 오른쪽, 왼쪽의 여백은 3cm 이상으로 한다.
+
+논문 제목의 활자의 크기는 \verb|\huge|로 한다.
+
+부제(副題)가 있을 경우, 논문 제목 아래 중앙에 맞춘다.
+
+학교명칭(고려대학교 대학원, Graduate School, Korea University 등)의 활자의 크기는 \verb|\LARGE|로 한다.
+
+논문 발간년도는 학위수여일이 속한 연, 월까지 표시하며 활자의 크기는 \verb|\large|로 한다. (예: 2023년 2월, 2023년 8월) 
+기타 부분의 글자 크기는 전부 \verb|\Large|로 한다.
+
+활자의 위치는 표시된 대로 하되 위치 표시가 없는 것은 좌우 중앙에 놓이게 한다.
+
+논문 표지, 속표지, 심사완료검인서 등에서 논문 제목이 길거나 부제가 포함되는 경우 등, 필요한 경우 활자의 크기, 자간, 장평, 굵기 등은 적절한 수준에서 조절 가능하다.
+
+기타 작성방법은 다음 장의 서식을 참고한다.
+
+\bigskip
+
+The cover page can be written in the language used for the main body.
+However, if the thesis/dissertation is written in Korean, Chinese characters can be used to effectively convey meaning.
+
+For the first three preliminary pages (including the cover page, title page and signature page) before the abstract, all margins (top, bottom, left and right) shall be at least 3 cm.
+
+The font size of the title should be \verb|\huge|.
+The font size of the school name (such as Graduate School, Korea University) shall be \verb|\LARGE|.
+The font size of the date and seal shall be \verb|\large|.
+Other items (such as department, student’s name, academic advisor’s name, master’s degree thesis, submitted…, completed…) shall be \verb|\Large|.
+The alignment of the text shall be center-aligned, unless otherwise indicated.
+
+If necessary, such as when the title is relatively long or includes a subtitle, the font size, character spacing, and thickness can be adjusted accordingly.
+
+For other details, refer to the template provided on the next page.
+
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{blue}
+\hline
+\Large 석(박) 사 학 위 논 문 \\\hline
+\rule{0pt}{60pt}\\\hline
+\\[-15pt]
+\huge 학위 논문 제목\\
+\Large - 부제가 있을 경우 중앙에 위치\\
+\rule{0pt}{180pt}\\\hline
+\LARGE 고 려 대 학 교  대 학 원 \\\hline
+\\[-8pt]\hline
+\Large O O O 학과\\
+\hline
+\\[-8pt]\hline
+\Large 홍 길 동\\\hline
+\rule{0pt}{60pt}\\\hline
+\large 202O년  O월 \\\hline
+\end{tabularx}
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{blue}
+\hline
+\Large Master's Thesis \\\hline
+\rule{0pt}{60pt}\\\hline
+\\[-15pt]
+\huge Title of Thesis\\
+\Large - put the subtitle if exists\\
+\rule{0pt}{150pt}\\\hline
+\Large Gildong Hong\\
+\hline
+\\[-8pt]\hline
+\Large Department of OOO \\\hline
+\rule{0pt}{30pt}\\\hline
+\LARGE Graduate School \\\hline
+\\[-8pt]\hline
+\LARGE Korea University \\\hline
+\rule{0pt}{20pt}\\\hline
+\large February 2023 \\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\large 속 표지 (Title page)
+\end{center}
+논문표지 다음에 간지를 삽입하고 그 다음 페이지에 속표지가 오게 한다.
+
+논문 제출일은 심사용 논문 제출기한이 속하는 연, 월까지만 표시한다. (예: 2022년 4월, 2022년 10월)
+
+일반대학원 국문 학위명은 O학 석사, O학 박사로 표기하며, 영문 학위명은 Master of Arts, Master of Science, Doctor of Philosophy로 표기하는 것을 원칙으로 한다.
+필요한 경우 학과 내 전공명을 in OOO으로 추가할 수 있다.
+전문 특수대학원은 각 대학원에서 정한 학위명에 따른다.
+
+기타 사항은 논문 표지 작성 방법 및 다음 장의 서식을 따른다.
+
+\bigskip
+
+A blank page must be inserted after the cover page, followed by the title page.
+
+The submission date of the thesis/dissertation is indicated according to the month and year of the submission deadline for the thesis/dissertation examination copy.
+(Example: April 2022, October 2022)
+
+The degree in English is written as Master of Arts, Master of Science, or Doctor of Philosophy in principle.
+If necessary, the name of the specific major within the department can be added.
+
+For other details, refer to the template provided on the next page.
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{blue}
+\hline
+\Large O O O 교 수 지 도 \\\hline
+\\[-8pt]\hline
+\Large 석(박) 사 학 위 논 문 \\\hline
+\rule{0pt}{60pt}\\\hline
+\\[-15pt]
+\huge 학위 논문 제목\\
+\rule{0pt}{60pt}\\\hline
+\Large 이 논문을 O학 석(박)사학위 논문으로 제출함 \\\hline
+\rule{0pt}{50pt}\\\hline
+\large 2022년 10월 \\\hline
+\rule{0pt}{50pt}\\\hline
+\LARGE 고 려 대 학 교  대 학 원 \\\hline
+\\[-8pt]\hline
+\Large O O O 학과\\\hline
+\\[10pt]\hline
+\Large 홍 길 동 (인)\\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\huge Title of Thesis
+\par\vspace{50pt}
+\Large by\\
+Gildong Hong
+\par\vspace{20pt}
+\rule{.6\textwidth}{0.4pt}
+\par\vspace{20pt}
+under the supervision of Professor Chulsu Kim
+\par\vspace{20pt}
+A thesis submitted in partial fulfillment of \par
+the requirements for the degree of \par
+Master of Arts (Science, etc.) (in Major)
+\par\vspace{10pt}
+\end{center}
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{blue}
+\hline
+\Large Department of OOO \\\hline
+\rule{0pt}{30pt}\\\hline
+\LARGE Graduate School \\\hline
+\\[-8pt]\hline
+\LARGE Korea University \\\hline
+\rule{0pt}{20pt}\\\hline
+\large October 2022 \\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\huge Title of Dissertation
+\par\vspace{50pt}
+\Large by\\
+Gildong Hong
+\par\vspace{20pt}
+\rule{.6\textwidth}{0.4pt}
+\par\vspace{20pt}
+under the supervision of Professor Chulsu Kim
+\par\vspace{20pt}
+A dissertation submitted in partial fulfillment of \par
+the requirements for the degree of \par
+Doctor of Philosophy (in Major)
+\par\vspace{10pt}
+\end{center}
+
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{blue}
+\hline
+\Large Department of OOO \\\hline
+\rule{0pt}{30pt}\\\hline
+\LARGE Graduate School \\\hline
+\\[-8pt]\hline
+\LARGE Korea University \\\hline
+\rule{0pt}{20pt}\\\hline
+\large October 2022 \\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\large 심사완료검인서 (Signature page)
+\end{center}
+
+심사완료검인일은 학위청구논문 심사가 완료된 날짜가 포함된 연, 월까지만 표시한다.
+(예: 2022년 12월, 2023년 6월)
+
+일반대학원 국문 학위명은 O학 석사, O학 박사로 표기하며, 영문 학위명은 Master of Arts, Master of Science, Doctor of Philosophy로 표기하는 것을 원칙으로 한다.
+필요한 경우 학과 내 전공명을 in OOO으로 추가할 수 있다.
+전문 특수대학원은 각 대학원에서 정한 학위명에 따른다.
+
+기타 사항은 다음 장의 서식을 따른다. 
+
+도서관 홈페이지(\url{https://dcollection.korea.ac.kr/})에 학위논문 온라인 제출시 원문의 심사완료검인서에는 서명을 포함하지 않으며, 서명이 포함된 심사완료검인서는 별도로 업로드 한다.
+그 외 제출서류는 도서관 안내사항에 따른다.
+
+일반대학원 논문심사위원과 관련된 규정은 아래와 같다.
+
+\bigskip
+
+제52조(논문심사위원)
+① 심사위원은 지도교수가 추천하고 대학원위원회의 심의를 거쳐 대학원장이 위촉한다.
+② 석사학위 논문심사위원회는 지도교수를 포함하여 3인 이상으로 구성하며 필요한 때에 지도교수의 추천으로 1명 이내의 박사학위를 소지한 외부교수 또는 전문가를 위촉할 수 있다.
+③ 박사학위 논문심사위원회는 지도교수를 포함하여 5인 이상으로 구성하며, 지도교수의 추천으로 최소 1명 이상, 최대 3명 이내의 박사학위를 소지한 외부교수 또는 전문가를 심사위원으로 위촉하여야 한다.
+단, 교내 타학과 교원을 외부교수로 인정할 수 있다.
+④ 학·연·산협동과정의 논문심사위원회에는 제2항 내지 제3항에서 정한 심사위원 외에도 학위청구논문의 공동지도자가 포함되어야 한다.
+⑤ 학과나 전공의 사정 혹은 논문의 성격상 교내·외 심사위원 구성을 위 2항, 3항대로 충족시키지 못할 경우 사전에 학과관리위원회의 심의를 거쳐 대학원장의 승인을 받아야 한다.
+⑥ 심사위원장은 심사위원 중에서 호선한다.
+⑦ 각 심사위원은 심사에 있어서 동등한 자격을 갖는다.
+
+\bigskip
+
+The date shall be written according to the month and year of the date the thesis/dissertastion examination has been completed
+(Example: December 2022; June 2023).
+
+In English, the degree is referred to as Master of Arts, Master of Science, or Doctor of Philosophy in principle.
+If necessary, the name of the specific major within the department can be added (in this case, the parentheses in the template on the next page should be deleted).
+
+For other details, refer to the template provided on the next page.
+
+When uploading the thesis/dissertation file to the Korea University Library website (\url{https://dcollection.korea.ac.kr/}), an unsigned signature page shall be included, and a signed signature page shall be uploaded separately.
+The graduate school regulations related to the thesis/dissertation examination committee are as follows.
+
+\bigskip
+
+Article 52 (Members of the Thesis/Dissertation Examination Committee)
+
+(1) Members of the thesis/dissertation examination committee shall be recommended by the candidate’s academic advisor and appointed by the Dean of the Graduate School upon deliberation of the relevant graduate school academic committee.
+
+(2) A thesis/dissertation examination committee for master’s degree programs shall be composed of at least three members including the candidate’s academic advisor.
+If necessary, one professor from another university or one outside expert holding a doctoral degree may be appointed as a committee member upon recommendation of the candidate’s academic advisor.
+
+(3) A thesis/dissertation examination committee for doctoral degree programs shall be composed of at least five members including the candidate’s academic advisor.
+At least one but no more than three professors from other universities or outside experts holding a doctoral degree must be appointed as committee members upon recommendation of the candidate’s academic advisor.
+However, faculty members from other departments of the University may be regarded as external professors.
+
+(4) A thesis/dissertation examination committee for academic-research-industrial cooperative program must include a co-advisor in addition to committee members specified in paragraphs 2 and 3.
+
+(5) In the event the conditions specified in paragraphs 2 and 3 are not met in the formation of the thesis/dissertation examination committee due to the circumstances of the department or program or the nature of the thesis/dissertation concerned, approval by the Dean of the Graduate School must be obtained following prior deliberation of the department administration committee of the relevant department.
+
+(6) The chair of a thesis/dissertation examination committee shall be elected from among the committee members.
+
+(7) Each member of the thesis/dissertation examination committee shall have equal authority in examining a thesis/dissertation. 
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{blue}
+\hline
+\rule{0pt}{20pt}\\\hline
+\Large O O O 의 O학 석(박)사 학위논문 심사를 완료함 \\\hline
+\rule{0pt}{60pt}\\\hline
+\large 20OO년 O월\\\hline
+\rule{0pt}{60pt}\\\hline
+\Large 위원장\qquad \phantom{학연산의 경우 추가}\quad(인) \\\hline
+\rule{0pt}{20pt}\\\hline
+\Large 위\phantom{원}원\qquad \phantom{학연산의 경우 추가}\quad(인) \\\hline
+\rule{0pt}{20pt}\\\hline
+\Large 위\phantom{원}원\qquad \phantom{학연산의 경우 추가}\quad(인) \\\hline
+\rule{0pt}{20pt}\\\hline
+\Large 위\phantom{원}원\qquad 박사의 경우 추가\phantom{가}\quad(인) \\\hline
+\rule{0pt}{20pt}\\\hline
+\Large 위\phantom{원}원\qquad 박사의 경우 추가\phantom{가}\quad(인) \\\hline
+\rule{0pt}{20pt}\\\hline
+\Large 위\phantom{원}원\qquad 학연산의 경우 추가\quad(인) \\\hline
+\rule{0pt}{20pt}\\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\Large
+The dissertation of Gildong Hong has been approved \par
+by the dissertation committee in partial fulfillment\par
+of the requirements for the degree of \par
+Master of Arts (Science) (in Major) 
+
+\par\vspace{50pt}
+
+\large December 2022
+
+\par\vspace{50pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Chair: Name
+
+\par\vspace{20pt}
+ 
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name
+ 
+\par\vspace{20pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\end{center}
+
+\newpage
+\begin{center}
+\Large
+The thesis of Gildong Hong has been approved \par
+by the thesis committee in partial fulfillment\par
+of the requirements for the degree of \par
+Master of Philosophy (in Major) 
+
+\par\vspace{50pt}
+
+\large December 2022
+
+\par\vspace{50pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Chair: Name
+
+\par\vspace{20pt}
+ 
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name
+ 
+\par\vspace{20pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+ 
+\par\vspace{20pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+ 
+\par\vspace{20pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+ 
+\par\vspace{20pt}
+
+\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\end{center}
+
+\newpage
+\newgeometry{paper=b5paper, left=20mm, right=20mm, top=30mm, bottom=30mm}
+% 이 페이지부터 여백(아래쪽, 위쪽, 3cm, 오른쪽, 왼쪽 2cm) 변경됨
+% Margins shall be changed to bottom and top 3 cm, right and left 2 cm from this page forward.
+
+\begin{center}
+\large 초록 (Abstract)
+\end{center}
+
+\normalsize
+본문의 활자크기는 10포인트 이상 12포인트 이하로 하며, 자간 및 장평은 조정 가능하다.
+
+초록부터의 페이지 여백은 아래쪽, 위쪽, 3cm 이상 오른쪽, 왼쪽 2cm 이상으로 한다.
+
+국문 학위논문의 초록은 국문, 영문의 순서로 작성하며, 영문 학위논문의 초록은 영문, 국문의 순서로 작성하며, 학위논문을 기타 외국어로 작성하는 경우 초록은 기타 외국어, 영문, 국문의 순서로 작성한다.
+
+초록에는 논문제목, 성명, 학과, 지도교수를 기재하며 초록 하단에 주요어(keywords)를 표기한다.
+
+페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용하며, 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2 , 3...)를 사용한다.
+
+기타 사항은 다음 장의 서식을 따른다. 
+
+\bigskip
+
+The font size shall be 10-12 points for the main body. If necessary, the character spacing and thickness can be adjusted accordingly.
+
+From the abstract on, the top and bottom margins shall be at least 3cm and the left and right margins shall be at least 2 cm.
+
+The abstract should be written in both Korean and English. In addition, a thesis/dissertation written in a foreign language other than English must include the abstract in the relevant foreign language, English and Korean. 
+
+The preliminary pages (abstract, dedication, preface, acknowledgments, table of contents, list of tables, list of figures, nomenclature) should be assigned using small Roman numerals (i, ii, iii, iv, v, etc.).
+The other preliminary pages (cover page, title page and signature page) should not be numbered.
+For the main body, use Arabic numbers (1, 2, 3, 4, 5, etc.) starting with page 1.
+
+For other details, refer to the template provided on the next page.
+
+\newpage
+\begin{center}
+\Large 학위 논문 제목 
+
+\par\vspace{20pt}
+
+\normalsize 홍 길 동\par
+O O 학 과\par
+지도교수: 김 철 수
+
+\par\vspace{20pt}
+
+\Large \textbf{초록}
+\end{center}
+\normalsize
+초록 내용을 작성합니다.
+\par\vspace{100pt}
+
+\textbf{주제어} : 중심어, 중심어, 중심어, 중심어, 중심어, 중심어
+
+
+\newpage
+\begin{center}
+\Large Title
+
+\par\vspace{20pt}
+
+\normalsize by Gildong Hong\par
+Department of OOOO\par
+under the supervision of Professor Chulsu Kim
+
+\par\vspace{20pt}
+
+\Large \textbf{Abstract}
+\end{center}
+\normalsize
+The text of the abstract begins here. 
+
+\par\vspace{100pt}
+
+\textbf{Keywords} : Keyword, Keyword, Keyword, Keyword, Keyword, Keyword
+
+\newpage
+\begin{center}
+\large
+감사의 글 (Dedication page)
+\end{center}
+\normalsize
+감사의 글은 필요한 경우 작성한다.
+
+감사의 글 작성시, 페이지 중앙에 위치하도록 한다. 
+
+감사의 글(dedication page) 제목은 생략하여 목차에 표현하지 않는 것이 일반적이다.
+
+You can dedicate your thesis/dissertation to someone you know either personally or professionally.
+It is customary to place the dedication text in the center of the page without a title heading.
+
+\newpage
+\begin{center}
+\large
+서문 (Preface)
+\end{center}
+\normalsize
+학위논문에 다른 사람들과 협력하여 수행된 결과가 포함되거나, 저자가 출판한 내용이 포함되는 경우, 이와 관련된 내용을 서문에 작성하여야 한다.
+서문에는 아래의 내용이 포함될 수 있다.
+다만, 서문을 따로 작성하지 않고, 관련 사항을 본문의 서론에서 언급하는 것도 가능하다. 
+
+① 다른 사람들과 협력하여 수행한 작업에 대한 다른 사람의 기여도와 비율 및 저자가 독창적이라고 주장하는 부분에 대한 설명
+
+② 논문의 일부분이 이미 출판되었거나 준비 중인 부분에 대한 설명 및 출판물에 대한 모든 사람의 기여
+
+③ 이외에도 논문작성 관련 개인적 상황 및 정보(personal information), 주제 선택 동기(motivation), 저자 관점, 감사 및 사사(acknowledgments) 등의 내용이 포함될 수 있다.
+
+\bigskip
+서문 작성 예
+\begin{itemize}
+\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+\end{itemize}
+
+\bigskip
+If the thesis/dissertation contains the results of work conducted in collaboration with other people, or if the thesis/dissertation contains previously published content, a preface must be included.
+The preface may include the following.
+However, it is also possible to include the contents of the preface in the introduction of the main body.
+
+① a description of the results that were obtained in collaboration with others, indicating the nature and proportion of the contribution of others and in general terms the portions of the work which the student claims as original
+
+② a description of contents that have been published or submitted for publication and the contributions of all authors involved in any multi-authored publications included in the thesis/dissertation
+
+③ your brief personal background, academic motivation, thesis/dissertation target group, acknowledgments, etc. can be included 
+
+\bigskip
+Example
+\begin{itemize}
+\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+\end{itemize}
+
+\newpage
+\begin{center}
+\large
+사사 (Acknowledgements)
+\end{center}
+\normalsize
+필요한 경우 사사를 작성한다.
+
+서문(preface)에서 사사(acknowledgments)와 관련된 내용을 기술한 경우, 생략할 수 있다.
+
+If necessary, acknowledgments can be included.
+
+If the Acknowledgments are mentioned in the preface, this section may be omitted.  
+
+\renewcommand{\contentsname}{목차 (Table of Contents)}
+\tableofcontents
+%목차는 초록부터 작성한다.
+%페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다. 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2, 3...)를 사용한다.
+%본문의 장은 아라비아 숫자(1, 2, 3, 4...), 부록은 영문 알파벳(A, B, C...)을 사용하여 구분하는 것이 일반적이다.
+%The table of contents starts with the abstract. 
+%The preliminary pages (abstract, dedication, preface, acknowledgments, table of contents, list of tables, list of figures, nomenclature) should be assigned using small Roman numerals (i, ii, iii, iv, v...). The other preliminary pages (cover page, title page and signature page) should not be numbered. For the main body, use Arabic numbers (1, 2, 3, 4, 5...) starting with page 1.
+%It is customary to use Arabic numbers (1, 2, 3, 4, 5...) for the chapters in the main body and captial letters (A, B, C...) for the sections in the appendices.
+
+\renewcommand{\listtablename}{표 목차 (List of Tables)}
+\listoftables
+%본문에 표가 포함되는 경우 반드시 표 목차를 작성한다. 본문을 한글로 작성하더라도 표 제목는 영어로 작성 가능하다. 표는 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+%A list of tables shall be included when there are tables in the thesis/dissertation. Table numbering can be continuous throughout the thesis/dissertation or by chapter (e.g., 1.1, 1.2, 2.1, 2.2...).
+
+\renewcommand{\listfigurename}{그림 목차 (List of Figures)}
+\listoffigures
+%본문에 그림이 포함되는 경우 반드시 그림 목차를 작성한다. 본문을 한글로 작성한 경우에도 그림 제목는 영어로 작성 가능하다. 그림은 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+%A list of figures shall be included when there are figures in the thesis/dissertation. Figure numbering can be continuous throughout the thesis/dissertation or by chapter (e.g., 1.1, 1.2, 2.1, 2.2...).
+
+\newpage
+\begin{center}
+\large
+기호 설명 (Nomenclature or list of symbols)
+\end{center}
+\normalsize
+필요한 경우 기호설명을 작성한다.
+기호 설명에는 필요한 경우 첨자 설명 및 약어 설명을 포함한다.
+본문을 한글로 작성한 경우에도 기호 설명은 영어로 작성 가능하다.
+
+If nomenclature or list of symbols is used, a section describing subscript and abbreviations can be included. 
+
+\newpage 
+
+\ % The empty page
+
+\newpage
+\begin{center}
+\large
+본문 (Main body)
+\end{center}
+\normalsize
+본문 앞에는 빈페이지를 둔다.
+
+A blank page should be inserted before the main body.
+
+
+\chapter{Introduction} \label{chap:intro}
+\section{Intro}
+\lipsum
+
+\begin{table}[h]
+\begin{tabular}{ccc}
+1&1&1\\\hline
+2&2&2\\
+3&3&3
+\end{tabular}
+\caption{The first table in the first section}
+\end{table}
+
+\section{Definitions and known results} \label{sec:def}
+\lipsum
+
+\begin{figure}[h]
+\text{[A figure here]}
+\caption{The first figure in the second section}
+\end{figure}
+
+\begin{table}[h]
+\begin{tabular}{ccc}
+1&1&1\\\hline
+2&2&2\\
+3&3&3
+\end{tabular}
+\caption{The second table in the second section}
+\end{table}
+
+
+\newpage
+\begin{center}
+\large
+참고문헌 (References or bibliography)
+\end{center}
+\normalsize
+본문 뒤에는 참고문헌(References) 또는 서지(Bibliography)를 작성한다. 
+
+참고문헌(References)은 본문에서 인용되거나 참고한 자료를 작성한 목록을 말한다.
+서지(Bibliography)는 엄밀한 의미에서 참고문헌(References) 뿐만 아니라 음반, 면담, 영화, TV프로그램, 그림 등 비문자 자료를 모두 포괄한다.
+ 
+참고문헌은 서지관리 프로그램(Endnote, Mendeley 등)을 사용하여 학문분야 특성에 맞게 저자 이름순 혹은 인용순 등으로 일관된 양식으로 작성한다.
+
+서지관리 프로그램 링크
+\begin{itemize}
+\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+\end{itemize}
+
+The references or bibliography follows the main body. 
+
+References are a detailed list of sources that are cited in your thesis/dissertation.
+A bibliography is a detailed list of references cited in your thesis/dissertation plus background or other material you have read but have not actually cited.
+
+References should be prepared in a consistent format using bibliographic management tools (Endnote, Mendeley, etc.) in the order of author name or citation according to your academic field.
+
+Bibliographic management tools
+\begin{itemize}
+\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+\end{itemize}
+
+\newpage
+\begin{center}
+\large
+부록 (Appendices or supplementary materials)
+\end{center}
+\normalsize
+필요한 경우 부록(appendices or supplementary materials)을 작성한다.
+
+부록의 각 장은 영문 알파벳을 사용하여 구분하는 것이 일반적이다.
+
+Appendices or supplementary materials are optional.
+
+It is customary to use capital letters (A, B, C...) for the sections in the appendices.
+
+\newpage
+\begin{center}
+\large
+색인 (Index)
+
+\end{center}
+\normalsize
+필요한 경우 색인(index)을 작성한다.
+
+The index is optional.
+
+
+
+
+%\newpage
+%
+%
+%
+%\newpage
+
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\begin{thebibliography}{AA}
+%\bibitem {ACC} C. Adams, M. Chu, T. Crawford, S. Jensen, K. Siegel and L. Zhang,
+%    {\em Stick index of knots and links in the cubic lattice},
+%    J. Knot Theory Ramif. \textbf{21} (2012) 1250041.
+%
+%
+%
+%\end{thebibliography}
+
+
+
+%\addcontentsline{toc}{chapter}{Bibliography}
+%
+%\bibliographystyle{abbrv}
+%\bibliography{reference.bib}
+%
+%
+
+
+
+\end{document}
+

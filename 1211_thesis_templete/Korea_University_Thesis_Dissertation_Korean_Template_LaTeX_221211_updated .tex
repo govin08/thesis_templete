@@ -1,0 +1,602 @@
+\documentclass{report}
+\usepackage{geometry, graphicx, kotex, imakeidx, titlesec} % necessary packages
+\usepackage{amsmath, amsthm, amssymb, mathrsfs, tabularx, multirow, verbatim, url,} % supplementary packages
+\usepackage[table]{xcolor}
+
+\definecolor{lgray}{gray}{0.95} % lightgray color
+\titleformat{\chapter}{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter.}{20pt}{\huge} % chapter style
+\newtheorem{theorem}{Theorem} % theorem environment
+\newtheorem{definition}{Definition} % definition environment
+% if you need similar environments like lemma, corollary or remark, add them all.
+\makeindex % a command for making index chapter
+\linespread{1.25} % set the vertical spacing between successive lines (the ratio of the maximal height of a normal font and the baselineskip)
+
+%%% stand for a new chapter or a new page
+%% stand for a new section
+% stand for a new subsection or a comment
+
+%%%%
+\begin{document}
+\pagenumbering{gobble} % disable the page number until otherwise specified.
+\newgeometry{paper=b5paper, left=30mm, right=30mm, top=30mm, bottom=30mm} % set the paper size and the margins
+
+%%% the cover page
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{lgray}
+\hline
+\Large 석(박) 사 학 위 논 문 \\\hline
+~\vspace{70pt}\\\hline % 3cm spacing % 0.5cm is approximately 14pt, where default vertical spacing is 0.5cm(14pt). %5\times14pt=70pt
+\huge 학위 논문 제목\\ % put the title here
+\Large 부제가 있을 경우 중앙에 위치\\
+~\vspace{14pt}\\\hline % 여백 조정 가능
+\LARGE 고 려 대 학 교 ~ 대 학 원\\\hline % ~ for spacing
+~\\\hline
+\Large OOO 학과 \\\hline % put the department here
+~\\\hline
+\Large 홍 길 동 \\\hline % put the student name here
+~\\\hline %3cm spacing %5\times14pt=70pt
+\large 2023년 2월 \\\hline % put the graduation month here
+\end{tabularx}
+
+%%% an empty page
+\newpage
+~
+%논문 표지 뒤에는 빈 페이지를 삽입합니다.
+%
+%본 양식은 대학원 학칙 일반대학원 시행세칙 및 일반대학원 학위논문 작성법에 따라서 MS Word를  사용하여 2022년 10월 작성되었다. 
+%제공된  양식에서 논문의 순서 및 겉표지, 속표지, 심사완료검인서, 초록 페이지에 안내된 내용은 반드시 따라야 하는 부분이며, 나머지 부분들은 한가지 예시로 제공되었으므로, 수정하여 사용 가능하다. 예로 장, 절, 항 제목의 서체, 글자크기, 정렬방식은 적절하게 변경하여 사용할 수 있다. 나머지 부분에서 반드시 지켜야 할 내용, 예를 들어 본문 글자 사이즈(10-12 포인트), 페이지 매기기 등은 “일반대학원_학위논문_작성법” 파일을 참고하여야 한다.
+%또한, 제공된 양식에서 설명 글에 해당하는 부분은 삭제하여야 하며, 겉표지, 속표지 등에 있는 테이블 줄은 보이지 않게 처리하여야 한다.
+
+%%% the cover page
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{lgray}
+\hline
+\Large 김 철 수 ~ 교 수 지 도 \\\hline % put the professor name here
+~\\\hline % 0.5cm 여백
+\Large 석(박) 사 학 위 논 문 \\\hline
+~\vspace{35pt}\\\hline %2-3cm 여백 %3\times14pt=42pt
+\huge 학위 논문 제목\\ % put the title here
+\Large 부제가 있을 경우 중앙에 위치\\
+~\vspace{28pt}\\\hline % 여백 조정 가능
+\Large 이 논문을 O학 석(박)사학위 논문으로 제출함\\\hline % put the major here
+~\vspace{35pt}\\\hline %2-3cm 여백 %3\times14pt=42pt
+\large 2023년 2월\\\hline % put the graduation month here
+~\vspace{35pt}\\\hline %2-3cm 여백 %3\times14pt=42pt
+\LARGE 고 려 대 학 교 ~ 대 학 원\\\hline % ~ for spacing
+~\\\hline % 0.5cm 여백
+\Large OOO 학과 \\\hline
+~\vspace{14pt}\\\hline %1cm 여백 1\times14pt=14pt
+\Large 홍길동 (인) \\\hline % put the student name here
+\end{tabularx}
+
+
+%%% the approval page for master's thesis
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{lgray}
+\hline
+~\vspace{14pt}\\\hline %1cm 여백 %1\times14pt=14pt
+\Large 홍길동의 O학 석(박)사학위 논문 심사를 완료함\\\hline
+~\vspace{42pt}\\\hline %2-3cm 여백 %3\times14pt=42pt
+\Large 20OO년 O월\\\hline
+~\vspace{42pt}\\\hline %2cm 여백 %3\times14pt=42pt
+\Large 위\phantom{원}원\qquad\phantom{박사의 경우 추가 }\qquad (인)\\\hline
+~\vspace{14pt}\\\hline %0.5cm 여백
+\Large 위\phantom{원}원\qquad\phantom{박사의 경우 추가 }\qquad (인)\\\hline
+~\vspace{14pt}\\\hline %0.5cm 여백
+\Large 위\phantom{원}원\qquad\phantom{박사의 경우 추가 }\qquad (인)\\\hline
+~\vspace{14pt}\\\hline %0.5cm 여백
+\Large 위\phantom{원}원\qquad박사의 경우 추가 \qquad (인)\\\hline
+~\vspace{14pt}\\\hline %0.5cm 여백
+\Large 위\phantom{원}원\qquad박사의 경우 추가 \qquad (인)\\\hline
+~\vspace{14pt}\\\hline %0.5cm 여백
+\end{tabularx}
+
+%%% the approval page for docgtoral thesis
+\newpage 
+\begin{center}
+\Large
+The dissertation of Gildong Hong has been approved \par % put the student name and the major here
+by the dissertation committee in partial fulfillment\par
+of the requirements for the degree of \par
+Master of Philosophy (in Major) 
+\par\vspace{50pt}
+\large December 2022 % put the approval month here
+\par\vspace{50pt}
+{\small\color{gray}{signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Chair: Chulsu Kim % put the committee chair name here
+\par\vspace{20pt}
+{\small\color{gray}{signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name % put the committee member name here
+\par\vspace{20pt}
+{\small\color{gray}{signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name % put the committee member name here
+\par\vspace{20pt}
+{\small\color{gray}{signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name % put the committee member name here 
+\par\vspace{20pt}
+{\small\color{gray}{signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name % put the committee member name here 
+\par\vspace{20pt}
+{\small\color{gray}{signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name % put the committee member name here 
+\end{center}
+
+%%% an empty page
+\newpage ~ 
+
+%%% korean abstract page
+\newpage 
+\begin{center}
+\LARGE 국문 제목 % put the title here
+\par\vspace{20pt}
+\normalsize by 홍길동\par % put the student name here
+OO 학과\par % put the professor name and the department here
+지도교수 : 김철수
+\par\vspace{20pt}
+\large \textbf{국문 초록}
+\end{center}
+\normalsize
+국문 학위논문의 초록은 국문, 영문의 순서로 작성하며, 영문 학위논문의 초록은 영문, 국문의 순서로 작성하며, 학위논문을 기타 외국어로 작성하는 경우 초록은 기타 외국어, 영문, 국문의 순서로 작성한다. (표준 스타일 적용)
+
+초록에는 논문제목, 성명, 학과, 지도교수를 기재하며 초록 하단에 주요어(keywords)를 표기한다. 
+페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다.
+
+\par\vspace{100pt}
+\textbf{중심어} : 중심어, 중심어, 중심어, 중심어, 중심어, 중심어
+
+%%%english abstract page
+\newpage 
+\pagenumbering{roman} % set the page number as roman type from this page on.
+\newgeometry{paper=b5paper, left=20mm, right=20mm, top=30mm, bottom=30mm} % set the paper size and the margins
+% 이 페이지부터 여백(아래쪽, 위쪽, 3cm, 오른쪽, 왼쪽 2cm) 변경됨
+% Margins shall be changed to bottom and top 3 cm, right and left 2 cm from this page forward.
+\addcontentsline{toc}{chapter}{초록}
+\begin{center}
+\LARGE Title % put the title here
+\par\vspace{20pt}
+\normalsize by Gildong Hong\par % put the student name here
+Department of OOOO\par
+under the supervision of Professor Chulsu Kim % put the professor name and the department here
+\par\vspace{20pt}
+\large \textbf{ABSTRACT}
+\end{center}
+\normalsize
+The text of the abstract begins here. 
+%The above title line (ABSTRACT) is styled using \large and  \textbf.
+% Paragraph text is styled using default style.
+% Pages should be assigned from the abstract using small Roman numericals (i, ii, iii, iv, v, etc.)
+\par\vspace{100pt}
+\textbf{Keywords} : Keyword, Keyword, Keyword, Keyword, Keyword, Keyword
+
+%%% an empty page
+\newpage 
+~ 
+
+%%% the dedication page
+\newpage 
+~
+%감사의 글은 필요한 경우 작성한다. 감사의 글 작성시, 페이지 중앙에 위치하도록 한다. 감사의 글(Dedication) 제목은 생략하여 목차에 표현하지 않는 것이 일반적이다.
+
+%%% the preface page
+\chapter*{서문}
+\addcontentsline{toc}{chapter}{서문}
+The text of the preface begins here. 
+%학위논문에 다른 사람들과 협력하여 수행된 결과가 포함되거나, 저자가 출판한 내용이 포함되는 경우, 이와 관련된 내용을 서문에 작성하여야 한다. 서문에는 아래의 내용이 포함될 수 있다. 다만, 서문을 따로 작성하지 않고, 관련 사항을 본문의 서론에서 언급하는 것도 가능하다. 
+%① 다른 사람들과 협력하여 수행한 작업에 대한 다른 사람의 기여도와 비율 및 저자가 독창적이라고 주장하는 부분에 대한 설명
+%② 논문의 일부분이 이미 출판되었거나 준비 중인 부분에 대한 설명 및 출판물에 대한 모든 사람의 기여
+%③ 이외에도 논문작성 관련 개인적 상황 및 정보(personal information), 주제 선택 동기(motivation), 저자 관점, 감사 및 사사(acknowledgments) 등의 내용이 포함될 수 있다.
+%
+%\bigskip
+%서문 작성 예
+%\begin{itemize}
+%\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+%\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+%\end{itemize}
+
+%%% the acknowledgement page
+\chapter*{사사}
+\addcontentsline{toc}{chapter}{사사}
+The text of the acknowledgements begins here.
+%필요한 경우 사사를 작성한다. 
+%서문(Preface)에서 사사(acknowledgments)와 관련된 내용을 기술한 경우, 생략할 수 있다.
+
+%%% the table of contents page
+\renewcommand{\contentsname}{목차}
+\tableofcontents
+%위의 목차는 스타일 “제목1, 2, 3”이 적용된 장, 절, 항 제목에 대해 자동적으로 생성된다.
+%목차는 초록부터 작성한다.
+%페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다. 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2, 3...)를 사용한다.
+%본문의 장은 아라비아 숫자(1, 2, 3, 4...), 부록은 영문 알파벳(A, B, C...)을 사용하여 구분하는 것이 일반적이다.
+
+%%% the list of tables page
+\renewcommand{\listtablename}{표 목차}
+\listoftables
+%위의 표 목차는 스타일 “Table Title”이 적용된 표 제목에 대해 자동적으로 생성된다.
+%본문에 표가 포함되는 경우 반드시 표 목차를 작성한다. 본문을 한글로 작성하더라도 표 제목는 영어로 작성 가능하다. 표는 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+%%% the list of figures page
+\renewcommand{\listfigurename}{그림 목차}
+\listoffigures
+%위의 그림 목차는 스타일 “Table Title”이 적용된 그림 제목에 대해 자동적으로 생성된다.
+%본문에 그림이 포함되는 경우 반드시 그림 목차를 작성한다. 본문을 한글로 작성한 경우에도 그림 제목는 영어로 작성 가능하다. 그림은 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+%%% the nomenclature page
+\chapter*{기호 설명}
+\addcontentsline{toc}{chapter}{기호 설명}
+\begin{tabular}{p{.2\textwidth}p{.7\textwidth}}
+$M$	& original mass matrix\\
+$K$	& original stiffness matrix\\[30pt]
+\multicolumn{2}{l}{Subscripts}\\
+$b$ & interface boundary\\
+$d$ & dominant\\[30pt]
+\multicolumn{2}{l}{Abbreviation}\\
+$CMS$ & Component Mode Synthesis\\
+\end{tabular}
+%필요한 경우 기호설명을 작성한다. 기호 설명에는 필요한 경우 첨자 설명 및 약어 설명을 포함한다.
+% 본문을 한글로 작성한 경우에도 기호 설명은 영어로 작성 가능하다.
+
+%%% an empty page
+\newpage 
+~% 본문 앞에는 빈페이지를 둔다. 
+
+%%% the first chapter of the main body
+\pagenumbering{arabic} % set the page number as arabic type from this page on.
+\chapter{서론}\label{chap:intro}
+장(chapter)을 만들기 위해 \verb|\chapter{서론}|을 사용하였으며, 목차생성시 자동적으로 포함된다.
+본문부터 페이지 번호는 아라비아 숫자(e.g., 1, 2, 3...)를 사용한다.
+모든 장과 절(section), 항(subsection)의 첫 문단은 기본적으로 들여쓰기가 되지 않도록 되어 있다.
+
+이 장을 라벨링 하기 위해서는 \verb|\label{chap:intro}|와 같은 명령어를 사용할 수 있다.
+
+%%
+\section{절 제목}\label{sec:section}
+절(section)을 만들기 위해 \verb|\section{절 제목}|을 사용하였으며, 목차생성시 자동적으로 포함된다.
+
+이 절을 라벨링 하기 위해서는 \verb|\label{sec:section}|와 같은 명령어를 사용할 수 있다.
+
+%
+\subsection{항 제목}\label{subs:subsection}
+항(subsection)을 만들기 위해 \verb|\subsection{항 제목}|을 사용하였으며, 목차생성시 자동적으로 포함된다.
+
+이 항을 라벨링 하기 위해서는 \verb|\label{subs:subsection}|와 같은 명령어를 사용할 수 있다.
+
+장, 절, 항에 대한 더 많은 정보를 위해서는 다음과 같은 자료를 참고할 수 있다 ; \url{https://www.overleaf.com/learn/latex/Headers_and_footers}
+
+%
+\section{장, 절, 항을 참조하기}\label{sec:referencing}
+위에 적은 첫번째 절을 참고하기 위해서는 \verb|\ref{sec:section}|와 같은 명령어를 사용할 수 있다 : 절 \ref{sec:section}
+
+위에 적은 첫번째 항을 참고하기 위해서는 \verb|\ref{subs:subsection}|와 같은 명령어를 사용할 수 있다 : 항 \ref{subs:subsection}
+
+상호참조에 대한 더 많은 정보를 위해서는 다음과 같은 자료들을 참고할 수 있다 :
+\begin{itemize}
+\item
+\url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing}
+\item
+\url{https://www.overleaf.com/learn/latex/Cross_referencing_sections%2C_equations_and_floats}
+\end{itemize}
+
+%%%  the second chapter of the main body
+\chapter{학위논문의 양식}\label{chap:organizing}
+
+%%
+\section{학위논문의 순서}\label{sec:order}
+학위논문은 논문 표지, 속표지, 심사완료검인서, 초록, 감사의 글(선택), 서문(필요시), 사사(선택), 목차, 표목차(본문에 표가 포함된 경우), 그림목차(본문에 그림이 포함된 경우), 기호설명(선택), 본문, 참고문헌, 부록(선택), 색인(선택)의 순서로 한다.
+
+%%
+\section{용지 크기, 여백 및 페이지 설정} \label{sec:papersize}
+논문의 규격은 4·6배판(B5)로 하는 것을 원칙으로 한다.
+
+논문 표지, 속표지, 심사완료검인서의 아래쪽, 위쪽, 오른쪽, 왼쪽의 여백은 3cm 이상으로 한다. 초록부터 페이지 여백은 아래쪽, 위쪽, 3cm 이상 오른쪽, 왼쪽 2cm 이상으로 한다.
+
+페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용하며, 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2 , 3...)를 사용한다.
+
+ 표는 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다. (Table \ref{tab:Organizing and formatting}).
+
+\renewcommand\tablename{표}
+\begin{table}[h]\centering
+\begin{tabular}{cccc}
+\hline
+\textbf{순서}&\textbf{비고}&\textbf{여백설정}&\textbf{페이지설정}\\\hline
+논문표지&&\multirow{4}{2.5cm}{\centering 위, 아래, 왼쪽 오른쪽 모두 3 cm 이상}&\multirow{4}{2.5cm}{\centering 없음}\\\cline{1-2}
+빈페이지&&\\\cline{1-2}
+속표지&&\\\cline{1-2}
+심사완료검인서&&\\\hline
+초록&국문 및 영문 초록 모두 작성 필요&\multirow{13}{2.5cm}{\centering  위, 아래 3 cm 이상\\[\baselineskip] 왼쪽, 오른쪽 2cm 이상}\\\hline
+감사의 글&선택&&\multirow{8}{2.5cm}{i, ii, iii, iv, \(\cdots\)}\\\cline{1-2}
+서문&필요시\\\cline{1-2}
+사사&선택\\\cline{1-2}
+목차&\\\cline{1-2}
+표 목차&\multirow{2}{4cm}{\centering 본문에 표나 그림이 있는 경우}&\\\cline{1-1}
+그림 목차&&\\\cline{1-2}
+기호설명&선택\\\cline{1-2}\cline{4-4}
+빈페이지&&&\\\cline{1-2}\cline{4-4}
+본문&&&\multirow{4}{2.5cm}{1, 2, 3, 4, \(\cdots\)}\\\cline{1-2}
+참고문헌&\\\cline{1-2}
+부록&선택&\\\cline{1-2}
+색인&선택&\\\hline
+\end{tabular}
+\caption{학위논문의 순서와 양식}
+\label{tab:Organizing and formatting}
+\end{table}
+
+The paper size and margins are governed by the \text{geometry} package.
+For more information, refer to the followings
+\begin{itemize}
+\item
+\url{http://mirrors.ctan.org/macros/latex/contrib/geometry/geometry.pdf}
+\item
+\url{https://www.overleaf.com/learn/latex/Page_size_and_margins}
+\end{itemize}
+
+%%
+\section{Fonts and Size}\label{sec:font}
+
+본문의 글자 크기는 11pt로 설정되어 있다.
+
+\LaTeX에서는 \verb|\normalsize|, \verb|\large|, \verb|\Large|, \verb|\LARGE|, \verb|\huge|와 같은 명령어를 사용해 글자크기를 변경할 수 있다.
+이 명령어들은, MS word 템플릿에서 각각 11pt, 14pt, 16pt, 18pt and 21pt에 해당된다.
+하지만, MS word 템플릿의 글자크기와는 약간의 차이가 있을 수 있다.
+아래 표 \ref{tab:font size}는 글자 크기에 대한 비교표이다.
+\footnote{\url{https://tug.org/texinfohtml/latex2e.html#Font-sizes}}
+\begin{table}[h]\centering
+\begin{tabular}{>{\centering\arraybackslash}p{6cm}cc}
+\hline
+&크기&\LaTeX 스타일\\\hline
+논문제목				&21&\verb|\huge|\\\hline
+학교이름(고려대학교)	&18&\verb|\LARGE|\\\hline
+기타내용(학과명, 이름, 지도교수, \(\cdots\), 제출함, \(\cdots\), 완료함 등)
+					&16&\verb|\Large|\\\hline
+연 월				&14&\verb|\large|\\\hline
+본문					&10--12&\verb|\normalsize|\\\hline
+장, 절, 항 제목		&None&\\\hline
+그림 제목			&None&\\\hline
+표 제목				&None&\\\hline
+\end{tabular}
+\caption{글꼴 크기와 스타일 적용}\label{tab:font size}
+\end{table}
+
+%\begin{tabular}{ccc}
+%MS word templete&\LaTeX commands&\LaTeX templete\\\hline
+%11pt&\verb|\normalsize|&10.95pt\\
+%14pt&\verb|\large|&12pt\\
+%16pt&\verb|\Large|&14.4pt\\
+%18pt&\verb|\LARGE|&17.28\\
+%21pt&\verb|\huge|&20.74\\
+%\end{tabular}
+%\caption{Font sizes}\label{tab:font size}
+
+방금 설명에서 표와 각주를 만들었다.
+표를 만들기 위해서는 \texttt{tabular} 환경을 만들 수 있다.
+이때, 열을 몇 개 사용할 것인지, 그리고 각 열들을 각각 어떻게 정렬할 것인지를 정해야 한다.
+아래 코드는, 중앙정렬되어 있는 세 열을 통해 만드는 표의 예이다.
+\begin{verbatim}
+\begin{tabular}{ccc} ... \end{tabular}
+\end{verbatim}
+\texttt{tabular} 환경 외에도 which are \texttt{taubularx}, \texttt{tabulary}, \texttt{tabu}와 같은 환경 혹은 \texttt{multirow}, \texttt{booktabs}와 같은 패키지를 사용해 조금 더 정밀하게 표를 만들 수 있다.
+
+\texttt{tabular} 환경은 \texttt{table} 환경 안에 넣는 것이 바람직하다.
+표에 대한 캡션은 \verb|\caption{...}|와 같이 사용할 수 있고, 표에 대한 라벨 \verb|\label{...} |은 캡션이 선언된 직후에 입력되어야 한다.
+\texttt{table} 환경에 포함된 모든 표들은 `표 목록'에 포함된다.
+
+표를 조판하는 데 있어서 \url{https://www.overleaf.com/learn/latex/Tables}와 같은 자료를 참고할 수 있을 것이다.
+
+%%
+\section{그림과 수식}\label{sec:figures_and_equations}
+
+그림은 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+그림을 삽하기 위해서는 \texttt{includegraphics}와 같은 명령어를 사용할 수 있으며, 이 명령어를 사용하기 위해서는 \texttt{graphicx} 패키지가 필요하다.
+\begin{verbatim}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{verbatim}
+위와 같은 명령에서, 대괄호 안에는 그림의 높이 혹은 너비를 특정할 수 있고, 중괄호 안에는 그림 파일의 파일명을 설정하여야 한다.
+이때, 파일명은 확장자를 입력해도 좋고, 입력하지 않아도 좋다.
+
+\texttt{includegraphics} 명령은 \texttt{figure} 환경 안에 넣는 것이 바람직하다.
+이번에도, 캡션과 라벨을 넣을 수 있으며, 라벨은 캡션 직후에 선언되어야 한다.
+\texttt{figure} 환경에 포함된 모든 그림들은 `그림 목록'에 포함된다.
+
+\renewcommand\figurename{그림}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{center}
+\caption{고려대 심벌}
+\label{fig:kumark}
+\end{figure}
+
+그림을 삽입하는 데 있어, 다음과 같은 자료들을 참고할 수 있다.
+\begin{itemize}
+\item
+\url{https://www.overleaf.com/learn/latex/Inserting_Images}
+\item
+\url{https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_3)%3A_Figures%2C_Subfigures_and_Tables}
+\end{itemize}
+
+수식은 본문 전체에 대해 연속적인 번호를 부여((1), (2), (3), (4), (5)...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+수식을 입력할 때에는 행중수식(inline mode)을 사용하여 \(E=mc^2\). % or $E=mc^2$
+와 같이 입력할 수 있다.
+혹은, 단락수식(display mode)을 사용해
+\[E=mc^2\]
+% or $$E=mc^2.$$
+% or
+%\begin{equation*}
+%E=mc^2
+%\end{equation*}
+와 같이 사용할 수도 있다.
+위의 단락수식은 식번호가 표시되지 않았는데, 단락수식에 식번호를 표시하기 위해서는 \texttt{equation} 환경을 사용할 수 있다.
+\begin{equation}
+E=mc^2
+\end{equation}
+위의 식번호는, 해당 수식이 첫번째 장의 첫번째 수식임을 나타내고 있다.
+식을 하나 더 입력하면, 이것은 첫번째 장의 두번째 수식임을 표시할 것이다 ;
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+식번호를 개별적으로 지정할 수도 있다.
+\verb|\tag{...}|를 사용하면 된다 ;
+\[E=mc^2\tag{$*$}\]
+
+여러 개의 식을 표현하려면, \texttt{gather} 환경을 사용할 수 있다.
+\texttt{gather} 환경은 단순히 식들을 세로로 나열한다.
+예를 들어, 연립방정식 \(x+y+z=3\), \(x-y+2z=1\), \(x+3z=2\)를 표현하기 위하여 \texttt{gather} 환경을 사용하면
+\begin{gather}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2.
+\end{gather}
+와 같이 된다.
+이렇게 하면, 각각의 식들에 대하여 식번호가 지정된다.
+식번호를 지정하지 않으려면 \texttt{gather*} 환경을 사용할 수 있다.
+\begin{gather*}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2.
+\end{gather*}
+지금까지는, 그냥 식들을 세로로 나열했을 뿐이다.
+만약, 연립방정식의 식들을 잘 정렬시켜서 조판하려면 \texttt{align}/\texttt{align*} 환경을 사용하면 된다.
+\texttt{align}/\texttt{align*} 환경을 사용할 때에는 `\&'을 통해 정렬시킬 대상을 지정해주면 된다.
+아래의 예에서는 등호(=)를 기준으로 정렬한 것이다.
+\begin{align*}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2.
+\end{align*}
+\texttt{align} 환경을 사용하면 모든 식들에 식번호가 붙고, \texttt{align*} 환경을 사용하면 식번호가 전혀 붙지 않는다.
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2.
+\end{align}
+연립방정식 전체를 하나의 식번호로 지정하려면 \texttt{aligned} 환경과 \texttt{equation} 환경을 동시에 사용하면 된다.
+\begin{equation}\label{eq:system}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2.
+\end{aligned}
+\end{equation}
+\verb|\label{...}|와 \verb|\eqref{...}|를 활용하면 식들에 대해서도 상호참조를 할 수 있다.
+예를 들어, 다음과 같이 쓸 수 있다.
+`식 \eqref{eq:system}의 근은 \(x=2\), \(y=1\), \(z=0\)이다.'
+
+위와 같은 수식 환경들 (\texttt{gather}, \texttt{align})은 \texttt{amsmath} 패키지를 통해 제공된다.
+수식을 적절하게 조판하기 위해서는 다음과 같은 자료들을 참고할 수 있을 것이다.
+\begin{itemize}
+\item
+\url{http://www.ams.org/arc/tex/amsmath/amsldoc.pdf}
+\item
+\url{http://wiki.ktug.org/wiki/wiki.php/수식작성}
+\end{itemize}
+
+%%
+\section{인용}
+인용을 위해서는 \texttt{quotation} 환경 혹은 \text{quote} 환경을 사용할 수 있다.
+
+%%
+\section{각주}
+각주를 사용하기 위해서는 \verb|\footnote{...}|와 같은 명령어를 사용할 수 있다.
+
+%%% the third chapter of the main body
+\chapter{분석}\label{chap:discussion}
+Discussion starts here.
+
+논문에 정의나 정리 등을 넣기 위해서는, 해당 환경들을 직접 정의해 사용할 수 있다.
+전처리부분(preamble, \verb|\begin{document}|의 앞부분)에 보면 \texttt{definition} 환경과 \texttt{theorem} 환경을 각각 정의해놓았었다.
+
+\texttt{definition} 환경을 사용할 때에는, 다음과 같이 정의의 이름을 특정해주어도 되고
+\begin{definition}[직각삼각형]
+직각삼각형은 한 각이 직각인 삼각형이다. 
+\end{definition}
+특정하지 않아도 된다.
+\begin{definition}
+직각삼각형은 한 각이 직각인 삼각형이다. 
+\end{definition}
+
+\texttt{theorem} 환경도 마찬가지로 사용해줄 수 있다 ;
+\begin{theorem}[피타고라스 정리]
+밑변의 길이가 \(a\), 높이가 \(b\), 빗변의 길이가 \(c\)인 직각삼각형에 대하여, 다음 식이 성립한다.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+\end{theorem}
+
+\begin{theorem}
+밑변의 길이가 \(a\), 높이가 \(b\), 빗변의 길이가 \(c\)인 직각삼각형에 대하여, 다음 식이 성립한다.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+\end{theorem}
+
+수식을 입력할 때에는, 가끔 특별한 종류의 알파벳을 사용해야 하는 경우가 있다.
+예를 들어, \(\mathbb R\), \(\mathcal T\), \(\mathscr A\), \(\mathfrak M\)와 같은 종류의 알파벳들을 사용할 수 있다.
+이러한 특수한 종류의 알파벳들 중 기본적으로 지원되는 것도 있지만, 몇몇 종류들은 \text{amssymb} or \text{mathrsfs}와 같은 패키지가 필요할 수도 있다.
+수식 입력에 관한 더 많은 정보를 위해서는 다음 자료들을 참고할 수 있다 ;
+\begin{itemize}
+\item
+\url{https://www.overleaf.com/learn/latex/Mathematical_expressions}
+\item
+\url{https://www.overleaf.com/learn/latex/Subscripts_and_superscripts}
+\item
+\url{https://www.overleaf.com/learn/latex/Brackets_and_Parentheses}
+\item
+\url{https://www.overleaf.com/learn/latex/Matrices}
+\item
+\url{https://www.overleaf.com/learn/latex/Integrals\%2C_sums_and_limits}
+\item
+\url{https://www.overleaf.com/learn/latex/Display_style_in_math_mode}
+\item
+\url{https://www.overleaf.com/learn/latex/Mathematical_fonts}
+\end{itemize}
+
+나중에 색인에서 쓰기 위하여 직각삼각형\index{right traingle}과 피타고라스정리\index{pythagorean theorem}에 대한 인덱싱을 여기에 해놓겠다.
+색인 장(chapter)에 \verb|\printindex| 명령어를 입력하기만 하면, 기존에 지정해놓은 모든 색인들이 자동적으로 나타난다.
+
+%%% the fourth chapter of the main body
+\chapter{결론}\label{chap:conclusion}
+Conclusion starts here.
+
+참고문헌에 수록되어 있는 문헌들을 인용하기 위해서는 \verb|\cite{LSTM}|와 같은 명령어를 사용할 수 있다.
+이 명령어를 사용하고 나면 \cite{LSTM}와 같이 잘 인용되는 것을 확인할 수 있다.
+이때, \texttt{LSTM}는 특정 논문에 대하여 지정해놓은 이름이다.
+또다른 참고문헌에 대해서는 \cite{pure}와 같이 인용할 수 있을 것이다.
+
+%%% the bibliography chapter
+\renewcommand\bibname{참고문헌(서지)}
+\addcontentsline{toc}{chapter}{참고문헌(서지)}
+\begin{thebibliography}{AA}
+\bibitem {LSTM} Hochreiter, Sepp, and Jürgen Schmidhuber. ``Long short-term memory.'' Neural computation 9.8 (1997): 1735-1780.
+\bibitem {pure} Hardy, Godfrey Harold. Course of pure mathematics. Courier Dover Publications, 2018.
+\end{thebibliography}
+%Reference starts here.
+%
+%References are a detailed list of sources that are cited in your thesis/dissertation. A bibliography is a detailed list of references cited in your thesis/dissertation plus background or other material you have read but have not actually cited.
+%
+%References should be prepared in a consistent format using bibliographic management tools (Endnote, Mendeley, etc.) in the order of author name or citation according to your academic field.
+%
+%Bibliographic management tools
+%\begin{itemize}
+%\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+%\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+%\end{itemize}
+
+%%% the appendix chapters
+\appendix
+\addcontentsline{toc}{chapter}{부록}
+\chapter{The first  appendix}
+A text for appendix 1 starts here.
+\chapter{The second appendix}
+A text for appendix 2 starts here.
+
+%%% the index chapter
+\addcontentsline{toc}{chapter}{색인}
+\printindex
+
+\end{document}

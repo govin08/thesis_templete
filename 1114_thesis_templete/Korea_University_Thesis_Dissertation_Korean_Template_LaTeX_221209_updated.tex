@@ -1,0 +1,505 @@
+\documentclass[11pt]{report}
+%\usepackage{amscd,epsfig,longtable}
+%\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, mathrsfs}
+\usepackage{graphicx, kotex, tabularx, multirow, setspace, url}
+\usepackage[table]{xcolor}
+\usepackage{geometry}
+\geometry{paper=b5paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+\counterwithin{table}{chapter}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\protect\theoremname}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\protect\definitionname}
+\theoremstyle{corollary}
+\newtheorem{corollary}[theorem]{\protect\corollaryname}
+\theoremstyle{definition}
+\newtheorem{rem}[theorem]{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{\protect\propositionname}
+\theoremstyle{definition}
+\newtheorem{claim}[theorem]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{\protect\lemmaname}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\examplename}{Claim}
+\providecommand{\definitionname}{Definition}
+\providecommand{\corollaryname}{Corollary}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+\begin{document}
+\onehalfspacing
+\renewcommand{\arraystretch}{1.5}
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+\Large 석(박) 사 학 위 논 문 \\\hline
+~\small\color{gray}{3cm spacing}\vspace{70pt}\\\hline % 0.5cm is approximately 14pt, where default vertical spacing is 0.5cm(14pt). %5\times14pt=70pt
+\huge 학위 논문 제목\\
+\Large 부제가 있을 경우 중앙에 위치\\
+~\small\color{gray}{여백 조정 가능}\vspace{14pt}\\\hline 
+\LARGE 고 려 대 학 교 ~ 대 학 원\\\hline % ~ for spacing
+~\small\color{gray}{0.5cm 여백}\\\hline
+\Large OOO 학과 \\\hline
+~\small\color{gray}{0.5cm 여백}\\\hline
+\Large 홍 길 동 \\\hline
+~\small\color{gray}{3cm spacing}\vspace{70pt}\\\hline %5\times14pt=70pt
+\large 2023년 2월 \\\hline
+\end{tabularx}
+
+\newpage
+~
+%논문 표지 뒤에는 빈 페이지를 삽입합니다.
+%
+%본 양식은 대학원 학칙 일반대학원 시행세칙 및 일반대학원 학위논문 작성법에 따라서 MS Word를  사용하여 2022년 10월 작성되었다. 
+%
+%- 22년 10월 21일 업데이트 사항 – 
+%직접 인용 예시 제공 / 각주 스타일 추가 제공
+%
+%한국출판협회에 무료로 배포하는 KoPub 2.0 서체와 Times New Roman 서체를 사용하였다. 
+%
+%https://www.kopus.org/biz-electronic-font2-2/
+%
+%제공된  양식에서 논문의 순서 및 겉표지, 속표지, 심사완료검인서, 초록 페이지에 안내된 내용은 반드시 따라야 하는 부분이며, 나머지 부분들은 한가지 예시로 제공되었으므로, 수정하여 사용 가능하다. 예로 장, 절, 항 제목의 서체, 글자크기, 정렬방식은 적절하게 변경하여 사용할 수 있다. 나머지 부분에서 반드시 지켜야 할 내용, 예를 들어 본문 글자 사이즈(10-12 포인트), 페이지 매기기 등은 “일반대학원_학위논문_작성법” 파일을 참고하여야 한다.
+%또한, 제공된 양식에서 설명 글에 해당하는 부분은 삭제하여야 하며, 겉표지, 속표지 등에 있는 테이블 줄은 보이지 않게 처리하여야 한다.
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+\Large 김 철 수 ~ 교 수 지 도 \\\hline
+~\small\color{gray}{0.5cm 여백}\\\hline
+\Large 석(박) 사 학 위 논 문 \\\hline
+~\small\color{gray}{2-3cm 여백}\vspace{35pt}\\\hline %3\times14pt=42pt
+\huge 학위 논문 제목\\
+\Large 부제가 있을 경우 중앙에 위치\\
+~\small\color{gray}{여백 조정 가능}\vspace{28pt}\\\hline 
+\Large 이 논문을 O학 석(박)사학위 논문으로 제출함\\\hline
+~\small\color{gray}{2-3cm 여백}\vspace{35pt}\\\hline %3\times14pt=42pt
+\large 2023년 2월\\\hline
+~\small\color{gray}{2-3cm 여백}\vspace{35pt}\\\hline %3\times14pt=42pt
+\LARGE 고 려 대 학 교 ~ 대 학 원\\\hline % ~ for spacing
+~\small\color{gray}{0.5cm 여백}\\\hline
+\Large OOO 학과 \\\hline
+~\small\color{gray}{1cm 여백}\vspace{14pt}\\\hline %1\times14pt=14pt
+\Large 홍길동 (인) \\\hline
+\end{tabularx}
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+~\small\color{gray}{1cm 여백}\vspace{14pt}\\\hline %1\times14pt=14pt
+\Large 홍길동의 O학 석(박)사학위 논문 심사를 완료함\\\hline
+~\small\color{gray}{2-3cm 여백}\vspace{42pt}\\\hline %3\times14pt=42pt
+\Large 20OO년 O월\\\hline
+~\small\color{gray}{2cm 여백}\vspace{42pt}\\\hline %3\times14pt=42pt
+\Large 위\phantom{원}원\qquad\phantom{박사의 경우 추가 }\qquad (인)\\\hline
+~\small\color{gray}{0.5cm 여백}\vspace{14pt}\\\hline
+\Large 위\phantom{원}원\qquad\phantom{박사의 경우 추가 }\qquad (인)\\\hline
+~\small\color{gray}{0.5cm 여백}\vspace{14pt}\\\hline
+\Large 위\phantom{원}원\qquad\phantom{박사의 경우 추가 }\qquad (인)\\\hline
+~\small\color{gray}{0.5cm 여백}\vspace{14pt}\\\hline
+\Large 위\phantom{원}원\qquad박사의 경우 추가 \qquad (인)\\\hline
+~\small\color{gray}{0.5cm 여백}\vspace{14pt}\\\hline
+\Large 위\phantom{원}원\qquad박사의 경우 추가 \qquad (인)\\\hline
+~\small\color{gray}{0.5cm 여백}\vspace{14pt}\\\hline
+\end{tabularx}
+
+\newpage
+\newgeometry{paper=b5paper, left=20mm, right=20mm, top=30mm, bottom=30mm}
+% 이 페이지부터 여백(아래쪽, 위쪽, 3cm, 오른쪽, 왼쪽 2cm) 변경됨
+% Margins shall be changed to bottom and top 3 cm, right and left 2 cm from this page forward.
+
+\newpage
+\begin{center}
+\LARGE 국문 제목
+\par\vspace{20pt}
+\normalsize by 홍길동\par
+OO 학과\par
+지도교수 : 김철수
+
+\par\vspace{20pt}
+
+\large \textbf{국문 초록}
+\end{center}
+\normalsize
+국문 학위논문의 초록은 국문, 영문의 순서로 작성하며, 영문 학위논문의 초록은 영문, 국문의 순서로 작성하며, 학위논문을 기타 외국어로 작성하는 경우 초록은 기타 외국어, 영문, 국문의 순서로 작성한다. 
+
+초록에는 논문제목, 성명, 학과, 지도교수를 기재하며 초록 하단에 주요어(keywords)를 표기한다. 
+페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다.
+
+\par\vspace{100pt}
+
+\textbf{중심어} : 중심어, 중심어, 중심어, 중심어, 중심어, 중심어
+
+
+\newpage
+\begin{center}
+\LARGE Title
+\par\vspace{20pt}
+\normalsize by Gildong Hong\par
+Department of OOOO\par
+under the supervision of Professor Chulsu Kim
+
+\par\vspace{20pt}
+
+\large \textbf{ABSTRACT}
+\end{center}
+\normalsize
+The text of the abstract begins here. 
+
+The above title line (ABSTRACT) is styled using \verb|\large| and  \verb|\textbf|.
+
+Paragraph text is styled using default style.
+
+Pages should be assigned from the abstract using small Roman numericals (i, ii, iii, iv, v, etc.)
+
+\par\vspace{100pt}
+
+\textbf{Keywords} : Keyword, Keyword, Keyword, Keyword, Keyword, Keyword
+
+\newpage
+~ % an empty page
+
+\newpage
+~
+%감사의 글은 필요한 경우 작성한다. 감사의 글 작성시, 페이지 중앙에 위치하도록 한다. 감사의 글(Dedication) 제목은 생략하여 목차에 표현하지 않는 것이 일반적이다.
+
+\newpage
+\begin{center}
+\large
+Preface
+\end{center}
+\normalsize
+The text of the preface begins here. 
+
+%학위논문에 다른 사람들과 협력하여 수행된 결과가 포함되거나, 저자가 출판한 내용이 포함되는 경우, 이와 관련된 내용을 서문에 작성하여야 한다. 서문에는 아래의 내용이 포함될 수 있다. 다만, 서문을 따로 작성하지 않고, 관련 사항을 본문의 서론에서 언급하는 것도 가능하다. 
+%① 다른 사람들과 협력하여 수행한 작업에 대한 다른 사람의 기여도와 비율 및 저자가 독창적이라고 주장하는 부분에 대한 설명
+%② 논문의 일부분이 이미 출판되었거나 준비 중인 부분에 대한 설명 및 출판물에 대한 모든 사람의 기여
+%③ 이외에도 논문작성 관련 개인적 상황 및 정보(personal information), 주제 선택 동기(motivation), 저자 관점, 감사 및 사사(acknowledgments) 등의 내용이 포함될 수 있다.
+
+%
+%\bigskip
+%서문 작성 예
+%\begin{itemize}
+%\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+%\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+%\end{itemize}
+
+\newpage
+\begin{center}
+\large
+사사
+\end{center}
+\normalsize
+필요한 경우 사사를 작성한다. 
+
+서문(Preface)에서 사사(acknowledgments)와 관련된 내용을 기술한 경우, 생략할 수 있다.
+
+\renewcommand{\contentsname}{목차}
+\tableofcontents
+%위의 목차는 스타일 “제목1, 2, 3”이 적용된 장, 절, 항 제목에 대해 자동적으로 생성된다.
+%목차는 초록부터 작성한다.
+%페이지 번호는 초록부터 본문 전까지 작은 로마 숫자(Roman numerals, e.g., i, ii, iii, iv...)를 사용한다. 본문의 서론부터 아라비아 숫자(Arabic numbers, e.g., 1, 2, 3...)를 사용한다.
+%본문의 장은 아라비아 숫자(1, 2, 3, 4...), 부록은 영문 알파벳(A, B, C...)을 사용하여 구분하는 것이 일반적이다.
+
+\renewcommand{\listtablename}{표 목차}
+\listoftables
+%위의 표 목차는 스타일 “Table Title”이 적용된 표 제목에 대해 자동적으로 생성된다.
+%본문에 표가 포함되는 경우 반드시 표 목차를 작성한다. 본문을 한글로 작성하더라도 표 제목는 영어로 작성 가능하다. 표는 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+\renewcommand{\listfigurename}{그림 목차}
+\listoffigures
+%위의 그림 목차는 스타일 “Table Title”이 적용된 그림 제목에 대해 자동적으로 생성된다.
+%본문에 그림이 포함되는 경우 반드시 그림 목차를 작성한다. 본문을 한글로 작성한 경우에도 그림 제목는 영어로 작성 가능하다. 그림은 본문 전체에 대해 연속적인 번호를 부여(1, 2, 3, 4, 5...) 하거나, 각 장(Chapter)에 기반하여 번호를 부여(1.2, 1.2, 2.1, 2.2...) 할 수 있다.
+
+\newpage
+\begin{center}
+\large
+기호 설명
+\end{center}
+\normalsize
+\begin{tabular}{p{.2\textwidth}p{.7\textwidth}}
+$M$	& original mass matrix\\
+$K$	& original stiffness matrix\\[30pt]
+\multicolumn{2}{l}{Subscripts}\\
+$b$ & interface boundary\\
+$d$ & dominant\\[30pt]
+\multicolumn{2}{l}{Abbreviation}\\
+$CMS$ & Component Mode Synthesis\\
+\end{tabular}
+%필요한 경우 기호설명을 작성한다. 기호 설명에는 필요한 경우 첨자 설명 및 약어 설명을 포함한다.
+% 본문을 한글로 작성한 경우에도 기호 설명은 영어로 작성 가능하다.
+\newpage 
+
+\ % 본문 앞에는 빈페이지를 둔다. 
+
+%%%
+\chapter{Introduction}\label{chap:intro}
+The following formatting information is intended to illustrate several acceptable ways of preparing a thesis or dissertation for your convenience.
+
+The first level heading is styled using chapter.
+Chapter 1 is styled with\\ \verb|\chapter{Introduction}|.
+You can put \verb|\label{chap:intro}| to refer to this chapter.
+
+The first paragraph of every chapter, section or subsection is, by default, set to be nonindented.
+
+%%
+\section{Second Level Heading}\label{sec:section}
+The second level subheading is styled using section.
+Section 1.1 is styled with \verb|\section{Second Level Heading}|.
+You can put \verb|\label{sec:section}| to refer to this section.
+
+%
+\subsection{Third Level Heading}\label{subs:subsection}
+The above third level subheading is styled using subsection.
+Subsection 1.1.1 is styled with \verb|\subsection{Third Level Heading}|.
+You can put \\\verb|\label{subs:subsection}| to refer to this subsection.
+
+It will appear in the Table of Contents, automatically.
+
+%
+\section{Referencing headings}\label{sec:referencing}
+Suppose that you want to refer to the first section.
+The first section (of the first chapter) was labeled with \verb|\label{sec:section}|.
+You can call the section by typing \verb|\ref{sec:section}| : Subsection \ref{sec:section}
+
+%%%
+\chapter{Organizing and Formatting}\label{chap:organizing}
+
+%%
+\section{Paper Size and Margins} \label{sec:papersize}
+The paper size of the thesis/dissertation shall be B5.
+For the first three preliminary pages (including the cover page, title page and signature page) before the abstract, all margins (top, bottom, left and right) shall be at least 3 cm.
+From the abstract on, the top and bottom margins shall be at least 3cm and the left and right margins shall be at least 2 cm (Table \ref{tab:Organizing and formatting}).
+
+\begin{table}[h]\centering
+\begin{tabular}{cccc}
+\hline
+\textbf{Order}&\textbf{Note}&\textbf{Margin}&\textbf{Pagination}\\\hline
+Cover page&&\multirow{4}{2.5cm}{\centering top, bottom, left \& right at least 3 cm}&\multirow{4}{2.5cm}{\centering None}\\\cline{1-2}
+Blank page&&\\\cline{1-2}
+Title page&&\\\cline{1-2}
+Signature page&&\\\hline
+Abstract&both English \& Korean&\multirow{13}{2.5cm}{\centering top \& bottom at least 3cm\\[\baselineskip] left \& right at least 2 cm}\\\hline
+Dedication page&optional&&\multirow{8}{2.5cm}{i, ii, iii, iv, \(\cdots\)}\\\cline{1-2}
+Preface&if necessary\\\cline{1-2}
+Acknowledgements&optional\\\cline{1-2}
+Table of contents&\\\cline{1-2}
+List of tables&\multirow{2}{4cm}{\centering if there are tables or figures in the main body}&\\\cline{1-1}
+List of figures&&\\\cline{1-2}
+Nomenclature&optiona\\\cline{1-2}\cline{4-4}
+Blank page&&&None\\\cline{1-2}\cline{4-4}
+Main body&&&\multirow{4}{2.5cm}{1, 2, 3, 4, \(\cdots\)}\\\cline{1-2}
+Reference&\\\cline{1-2}
+Appendices&optional&\\\cline{1-2}
+index&optional&\\\hline
+\end{tabular}
+\caption{Organizing and formatting thesis/dissertation}
+\label{tab:Organizing and formatting}
+\end{table}
+
+%%
+\section{Fonts and Size}\label{sec:font}
+
+The default font size is set to 11pt.
+In \LaTeX you can use commands like \verb|\normalsize|, \verb|\large|, \verb|\Large|, \verb|\LARGE|, \verb|\huge|, and so on, to specify the size of the font.
+We relate the above commands to 11pt, 14pt, 16pt, 18pt and 21pt, respectly, of the MS word templete.
+Thus, there are slight differences of font size in MS word templete and in \LaTeX templete.
+The below (Table \ref{tab:font size}) is the comparison table for the font size.
+\footnote{\url{https://tug.org/texinfohtml/latex2e.html#Font-sizes}}
+\begin{table}[h]\centering
+\begin{tabular}{>{\centering\arraybackslash}p{6cm}cc}
+\hline
+&Size Requirements&\LaTeX Style\\\hline
+Thesis title			&21&\verb|\huge|\\\hline
+The school name (Graduate School, Korea University)
+					&18&\verb|\LARGE|\\\hline
+All other parts are 16 points (department, name, advisor, master's thesis, \(\cdots\), submitted, \(\cdots\) completed, etc.)	
+					&16&\verb|\Large|\\\hline
+Year, month and day	&14&\verb|\large|\\\hline
+Main Text			&10--12&\verb|\normalsize|\\\hline
+Heading				&None&\\\hline
+Figure caption			&None&\\\hline
+Table caption			&None&\\\hline
+\end{tabular}
+\caption{Requirement for font size and the style used in this manuscript}\label{tab:font size}
+\end{table}
+
+%\begin{tabular}{ccc}
+%MS word templete&\LaTeX commands&\LaTeX templete\\\hline
+%11pt&\verb|\normalsize|&10.95pt\\
+%14pt&\verb|\large|&12pt\\
+%16pt&\verb|\Large|&14.4pt\\
+%18pt&\verb|\LARGE|&17.28\\
+%21pt&\verb|\huge|&20.74\\
+%\end{tabular}
+%\caption{Font sizes}\label{tab:font size}
+
+Here is how we put tables and footnote in \LaTeX.
+To typeset a table, use the environment \texttt{tabular} and specify the columns.
+The above table has three center-aligned columns ;
+\begin{verbatim}
+\begin{tabular}{ccc} ... \end{tabular}
+\end{verbatim}
+You can also use advanced version of \texttt{tabular}, which are \texttt{taubularx}, \texttt{tabulary}, \texttt{tabu}, to manipulate the typeset of tables.
+
+It is desirable to put the \texttt{tabular} environment inside the \texttt{table} environment.
+You can add caption by \verb|\caption{...}|.
+The labeling \verb|\label{...} | for future reference should be followed just after the caption.
+All the tables in the \texttt{table} environment will be included in the `List of Tables`.
+
+%%
+\section{Figures and Equations}\label{sec:figures_and_equations}
+
+To include the figure file in the document, you can use \texttt{includegraphics} command, which require \texttt{graphicx} package.
+\begin{verbatim}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{verbatim}
+You can specify the width or the height of the figure inside the square brackets and the file name (with or without the extension) inside the braces.
+
+It is desirable to put the \texttt{includegraphics} command inside the \texttt{figure} environment.
+Again, the labeling need to be followed just after the caption.
+All the tables in the \texttt{table} environment will be included in the `List of Tables'.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{center}
+\caption{Korea University Global Symbol}
+\label{fig:kumark}
+\end{figure}
+
+You can type an equation with inline math mode like \(E=mc^2\). %or $E=mc^2$.
+Or you can type
+\[E=mc^2\]
+%$$E=mc^2.$$
+%\begin{equation*}
+%E=mc^2
+%\end{equation*}
+to express the equation in display math mode.
+The above equation is an unnumbered.
+To number the equation automatically, you can use \texttt{equation} environment;
+\begin{equation}
+E=mc^2
+\end{equation}
+The number or the tag of the above equation reads `the first eqeuation of the section \ref{sec:figures_and_equations}'.
+If you add one more equation, you can get the second eqaution of the section \ref{sec:figures_and_equations}.
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+You can also specify tha tagging explicitly by
+\[E=mc^2\tag{$*$}\]
+
+To express a list of equations, you can use the \texttt{gather} environment, which just enumerate equations vertically.
+For example, suppose that you want to express a system of linear equations \(x+y+z=3\), \(x-y+2z=1\), \(x+3z=2\).
+\begin{gather}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2,
+\end{gather}
+If you want to unnumber the equations, use \texttt{gather*} environment;
+\begin{gather*}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2,
+\end{gather*}
+Note that the above system is not well aligned.
+To align the equations horizontally, with respect to the equality sign, you can use \texttt{align} (or \texttt{align*}) environment
+\begin{align*}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align*}
+\texttt{align} environment (instead of \texttt{align*} environment) tags every equation of the system
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align}
+If you want one tagging for the system, you can use the \texttt{aligned} environment and the \texttt{equation} environment, simultaneously
+\begin{equation}\label{eq:system}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{aligned}
+\end{equation}
+Finally, you can label and refer an equation, by \verb|\label{...}| and \verb|\eqref{...}|.
+For example, you can say that `The root of \eqref{eq:system} is \(x=2\), \(y=1\), \(z=0\)'.
+
+The environments \texttt{align}, \texttt{gather} and others, are the environments provided by the \texttt{amsmath} package.
+For more information to typeset the equation neatly, refer to \url{http://www.ams.org/arc/tex/amsmath/amsldoc.pdf}.
+
+%%%
+\chapter{Discussion}\label{chap:discussion}
+Discussion starts here.
+
+%%%
+\chapter{Conclusion}\label{chap:conclusion}
+Conclusion starts here. 
+
+
+\newpage
+\renewcommand\bibname{Reference(or Bibliography)}
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{AA}
+\bibitem {ACC} C. Adams, M. Chu, T. Crawford, S. Jensen, K. Siegel and L. Zhang,
+    {\em Stick index of knots and links in the cubic lattice},
+    J. Knot Theory Ramif. \textbf{21} (2012) 1250041.
+
+
+
+\end{thebibliography}
+\begin{center}
+\large
+참고문헌
+\end{center}
+\normalsize
+%본문 뒤에는 참고문헌(References) 또는 서지(Bibliography)를 작성한다. 
+%
+%참고문헌(References)은 본문에서 인용되거나 참고한 자료를 작성한 목록을 말한다. 서지(Bibliography)는 엄밀한 의미에서 참고문헌(References) 뿐만 아니라 음반, 면담, 영화, TV프로그램, 그림 등 비문자 자료를 모두 포괄한다. 
+%
+%참고문헌은 서지관리 프로그램(Endnote, Mendeley 등)을 사용하여 학문분야 특성에 맞게 저자 이름순 혹은 인용순 등으로 일관된 양식으로 작성한다.
+%
+%서지관리 프로그램 링크
+%\begin{itemize}
+%\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+%\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+%\end{itemize}
+\newpage
+\begin{center}
+\large
+부록
+\end{center}
+\normalsize
+\paragraph{A. 부록 제목}
+%필요한 경우 부록(appendices or supplementary materials)을 작성한다.
+
+%부록의 각 장은 영문 알파벳을 사용하여 구분하는 것이 일반적이다.
+
+
+\newpage
+\begin{center}
+\large
+색인
+
+\end{center}
+\normalsize
+필요한 경우 색인(index)을 작성한다.
+\end{document}

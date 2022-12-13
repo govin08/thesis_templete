@@ -1,0 +1,575 @@
+\documentclass[11pt]{report}
+%\usepackage{amscd,epsfig,longtable}
+%\usepackage[T1]{fontenc}
+\usepackage{amsthm, amsmath, amssymb, mathrsfs}
+\usepackage{geometry, graphicx, kotex, tabularx, multirow, verbatim, setspace, url}
+\usepackage[table]{xcolor}
+\geometry{paper=b5paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{\protect\theoremname}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{\protect\definitionname}
+\theoremstyle{corollary}
+\newtheorem{corollary}[theorem]{\protect\corollaryname}
+\theoremstyle{definition}
+\newtheorem{rem}[theorem]{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{\protect\propositionname}
+\theoremstyle{definition}
+\newtheorem{claim}[theorem]{\protect\examplename}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{\protect\lemmaname}
+\newtheorem{assumption}[theorem]{Assumption}
+
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\examplename}{Claim}
+\providecommand{\definitionname}{Definition}
+\providecommand{\corollaryname}{Corollary}
+
+\begin{document}
+\onehalfspacing
+\renewcommand{\arraystretch}{1.5}
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+\Large Master's Thesis \\\hline
+~\small\color{gray}{3cm spacing}\vspace{70pt}\\\hline % 0.5cm is approximately 14pt, where default vertical spacing is 0.5cm(14pt). %5\times14pt=70pt
+\huge Title of Thesis\par\vspace{98pt}
+~\small\color{gray}{spacing can be adjusted}\vspace{14pt}\\\hline 
+\Large Gildong Hong\\\hline
+~\small\color{gray}{0.5cm spacing}\\\hline 
+\Large Department of OOO \\\hline
+~\small\color{gray}{1.5cm spacing}\vspace{28pt}\\\hline %2\times14pt=28pt
+\LARGE Graduate School \\\hline
+~\small\color{gray}{0.5cm spacing}\\\hline
+\LARGE Korea University \\\hline
+~\small\color{gray}{1cm spacing}\vspace{14pt}\\\hline %1\times14pt=14pt
+\large February 2023 \\\hline
+\end{tabularx}
+
+\newpage
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+\Large Doctoral Dissertation \\\hline
+~\small\color{gray}{3cm spacing}\vspace{70pt}\\\hline % 0.5cm is approximately 14pt, where default vertical spacing is 0.5cm(14pt). %5\times14pt=70pt
+\huge Title of Dissertation\par\vspace{98pt}
+~\small\color{gray}{spacing can be adjusted}\vspace{14pt}\\\hline
+\Large Gildong Hong\\\hline
+~\small\color{gray}{0.5cm spacing}\\\hline
+\Large Department of OOO \\\hline
+~\small\color{gray}{1.5cm spacing}\vspace{28pt}\\\hline %2\times14pt=28pt
+\LARGE Graduate School \\\hline
+~\small\color{gray}{0.5cm spacing}\\\hline
+\LARGE Korea University \\\hline
+~\small\color{gray}{1cm spacing}\vspace{14pt}\\\hline %1\times14pt=14pt
+\large February 2023 \\\hline
+\end{tabularx}
+
+\newpage
+~
+%Blank page should be inserted after the cover page.
+%
+%Updated in 2022.10.21
+%
+%Title page format updated for long titles / footnote example provided / 16pt narrow title page style (for department name) provided / direct quotation example provided
+%
+%Updated in 2022.11.02
+%
+%Table of contents style (Title1) changed to express small Roman numerals (i, ii, iii, iv, v...)
+%
+%The cover page, title page, signature page and abstract should follow the format provided by this template, but other parts (e.g., section title size, alignment, etc.) can be modified as appropriate.
+%
+%Comments in the template file should be deleted and table lines on the cover page, signature page, etc. should be changed to be invisible.
+
+
+\newpage
+\begin{center}
+\huge Title of Thesis
+\par\vspace{50pt}
+\Large by\\
+Gildong Hong
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-15pt]
+\rule{.6\textwidth}{0.4pt}
+\par\vspace{20pt}
+under the supervision of Professor Chulsu Kim
+\par\vspace{20pt}
+A thesis submitted in partial fulfillment of \par
+the requirements for the degree of \par
+Master of Arts (Science, etc.) (in Major)
+\par\vspace{10pt}
+\end{center}
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+\Large Department of OOO \\\hline
+\rule{0pt}{30pt}\\\hline
+\LARGE Graduate School \\\hline
+\\[-8pt]\hline
+\LARGE Korea University \\\hline
+\rule{0pt}{20pt}\\\hline
+\large October 2022 \\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\huge Title of Dissertation
+\par\vspace{50pt}
+\Large by\\
+Gildong Hong
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-15pt]
+\rule{.6\textwidth}{0.4pt}
+\par\vspace{20pt}
+under the supervision of Professor Chulsu Kim
+\par\vspace{20pt}
+A dissertation submitted in partial fulfillment of \par
+the requirements for the degree of \par
+Doctor of Philosophy (in Major)
+\par\vspace{10pt}
+\end{center}
+\noindent
+\begin{tabularx}{\textwidth}{| >{\centering\arraybackslash}X |}
+\arrayrulecolor{gray}
+\hline
+\Large Department of OOO \\\hline
+\rule{0pt}{30pt}\\\hline
+\LARGE Graduate School \\\hline
+\\[-8pt]\hline
+\LARGE Korea University \\\hline
+\rule{0pt}{20pt}\\\hline
+\large October 2022 \\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+\Large
+The thesis of Gildong Hong has been approved \par
+by the thesis committee in partial fulfillment\par
+of the requirements for the degree of \par
+Master of Arts (Science) (in Major) 
+\par\vspace{50pt}
+\large December 2022
+\par\vspace{50pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Chair: Name
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\end{center}
+
+\newpage
+\begin{center}
+\Large
+The dissertation of Gildong Hong has been approved \par
+by the dissertation committee in partial fulfillment\par
+of the requirements for the degree of \par
+Master of Philosophy (in Major) 
+\par\vspace{50pt}
+\large December 2022
+\par\vspace{50pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Chair: Name
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\par\vspace{20pt}
+{\small\color{gray}{student signiture}}\\[-10pt]\rule{.6\textwidth}{0.4pt}\par
+Committee Member: Name 
+\end{center}
+
+\newpage
+\newgeometry{paper=b5paper, left=20mm, right=20mm, top=30mm, bottom=30mm}
+% 이 페이지부터 여백(아래쪽, 위쪽, 3cm, 오른쪽, 왼쪽 2cm) 변경됨
+% Margins shall be changed to bottom and top 3 cm, right and left 2 cm from this page forward.
+
+
+\newpage
+\begin{center}
+\LARGE Title
+\par\vspace{20pt}
+\normalsize by Gildong Hong\par
+Department of OOOO\par
+under the supervision of Professor Chulsu Kim
+
+\par\vspace{20pt}
+
+\large \textbf{ABSTRACT}
+\end{center}
+\normalsize
+The text of the abstract begins here. 
+
+The above title line (ABSTRACT) is styled using \verb|\large| and  \verb|\textbf|.
+
+Paragraph text is styled using default style.
+
+Pages should be assigned from the abstract using small Roman numericals (i, ii, iii, iv, v, etc.)
+
+\par\vspace{100pt}
+
+\textbf{Keywords} : Keyword, Keyword, Keyword, Keyword, Keyword, Keyword
+
+\newpage
+\begin{center}
+\LARGE 국문 제목
+\par\vspace{20pt}
+\normalsize by 홍길동\par
+OO 학과\par
+지도교수 : 김철수
+
+\par\vspace{20pt}
+
+\large \textbf{국문 초록}
+\end{center}
+\normalsize
+The Korean abstract should follow the English abstract.
+영어 논문의 경우에도 한글 초록이 작성되어야 합니다.
+
+The abstract should be written in both Korean and English.
+In addition, a thesis/dissertation written in a foreign language other than English must include the abstract in the relevant foreign language, English and Korean. 
+
+\par\vspace{100pt}
+
+\textbf{중심어} : 중심어, 중심어, 중심어, 중심어, 중심어, 중심어
+
+\newpage
+~ % an empty page
+
+\newpage
+~
+%You can dedicate your thesis/dissertation to someone you know either personally or professionally.
+%It is customary to place the dedication text in the center of the page without a title heading.
+
+% Style the above line with main center.
+% If you do not need tihs page, delete it.
+
+\newpage
+\begin{center}
+\large
+Preface
+\end{center}
+\normalsize
+The text of the preface begins here. 
+
+%If the thesis/dissertation contains the results of work conducted in collaboration with other people, or if the thesis/dissertation contains previously published content, a preface must be included. The preface may include the following. However, it is also possible to include the contents of the preface in the introduction of the main body.
+%① a description of the results that were obtained in collaboration with others, indicating the nature and proportion of the contribution of others and in general terms the portions of the work which the student claims as original
+%② a description of contents that have been published or submitted for publication and the contributions of all authors involved in any multi-authored publications included in the thesis/dissertation
+%③ your brief personal background, academic motivation, thesis/dissertation target group, acknowledgments, etc. can be included 
+%
+%\bigskip
+%Example
+%\begin{itemize}
+%\item\url{https://www.grad.ubc.ca/sites/default/files/doc/page/thesis_sample_prefaces.pdf}
+%\item\url{https://www.phase-trans.msm.cam.ac.uk/2002/thomas/chapter1.pdf}
+%\end{itemize}
+
+\newpage
+\begin{center}
+\large
+Acknowledgements
+\end{center}
+\normalsize
+The text of the acknowledgements begins here.
+
+If necessary, acknowledgments can be included.
+If the Acknowledgments are mentioned in the preface, this section may be omitted. 
+
+\tableofcontents
+%The table of contents starts with the abstract. 
+%The preliminary pages (abstract, dedication, preface, acknowledgments, table of contents, list of tables, list of figures, nomenclature) should be assigned using small Roman numerals (i, ii, iii, iv, v...). The other preliminary pages (cover page, title page and signature page) should not be numbered. For the main body, use Arabic numbers (1, 2, 3, 4, 5...) starting with page 1.
+%It is customary to use Arabic numbers (1, 2, 3, 4, 5...) for the chapters in the main body and capital letters (A, B, C...) for the sections in the appendices.
+
+\listoftables
+%A list of tables shall be included when there are tables in the thesis/dissertation. Table numbering can be continuous throughout the thesis/dissertation or by chapter (e.g., 1.1, 1.2, 2.1, 2.2...).
+
+\listoffigures
+%List of figures should be prepared when figures are included in the thesis/dissertation. Figure numbering can be be continuous throughout the thesis/dissertation or by chapter (e.g., 1.1, 1.2, 2.1, 2.2...).
+
+\newpage
+\begin{center}
+\large
+Nomenclature or list of symbols
+\end{center}
+\normalsize
+\begin{tabular}{p{.2\textwidth}p{.7\textwidth}}
+$M$	& original mass matrix\\
+$K$	& original stiffness matrix\\[30pt]
+\multicolumn{2}{l}{Subscripts}\\
+$b$ & interface boundary\\
+$d$ & dominant\\[30pt]
+\multicolumn{2}{l}{Abbreviation}\\
+$CMS$ & Component Mode Synthesis\\
+\end{tabular}
+%If nomenclature or list of symbols is used, a section describing subscript and abbreviations can be included.
+\newpage 
+
+\ % A blank page should be inserted before the main body. 
+
+%%%
+\chapter{Introduction}\label{chap:intro}
+The following formatting information is intended to illustrate several acceptable ways of preparing a thesis or dissertation for your convenience.
+
+The first level heading is styled using chapter.
+Chapter 1 is styled with\\ \verb|\chapter{Introduction}|.
+You can put \verb|\label{chap:intro}| to refer to this chapter.
+
+The first paragraph of every chapter, section or subsection is, by default, set to be nonindented.
+
+%%
+\section{Second Level Heading}\label{sec:section}
+The second level subheading is styled using section.
+Section 1.1 is styled with \verb|\section{Second Level Heading}|.
+You can put \verb|\label{sec:section}| to refer to this section.
+
+%
+\subsection{Third Level Heading}\label{subs:subsection}
+The above third level subheading is styled using subsection.
+Subsection 1.1.1 is styled with \verb|\subsection{Third Level Heading}|.
+You can put \\\verb|\label{subs:subsection}| to refer to this subsection.
+
+It will appear in the Table of Contents, automatically.
+
+%
+\section{Referencing headings}\label{sec:referencing}
+Suppose that you want to refer to the first section.
+The first section (of the first chapter) was labeled with \verb|\label{sec:section}|.
+You can call the section by typing \verb|\ref{sec:section}| : Subsection \ref{sec:section}
+
+%%%
+\chapter{Organizing and Formatting}\label{chap:organizing}
+
+%%
+\section{Paper Size and Margins} \label{sec:papersize}
+The paper size of the thesis/dissertation shall be B5.
+For the first three preliminary pages (including the cover page, title page and signature page) before the abstract, all margins (top, bottom, left and right) shall be at least 3 cm.
+From the abstract on, the top and bottom margins shall be at least 3cm and the left and right margins shall be at least 2 cm (Table \ref{tab:Organizing and formatting}).
+
+\begin{table}[h]\centering
+\begin{tabular}{cccc}
+\hline
+\textbf{Order}&\textbf{Note}&\textbf{Margin}&\textbf{Pagination}\\\hline
+Cover page&&\multirow{4}{2.5cm}{\centering top, bottom, left \& right at least 3 cm}&\multirow{4}{2.5cm}{\centering None}\\\cline{1-2}
+Blank page&&\\\cline{1-2}
+Title page&&\\\cline{1-2}
+Signature page&&\\\hline
+Abstract&both English \& Korean&\multirow{13}{2.5cm}{\centering top \& bottom at least 3cm\\[\baselineskip] left \& right at least 2 cm}\\\hline
+Dedication page&optional&&\multirow{8}{2.5cm}{i, ii, iii, iv, \(\cdots\)}\\\cline{1-2}
+Preface&if necessary\\\cline{1-2}
+Acknowledgements&optional\\\cline{1-2}
+Table of contents&\\\cline{1-2}
+List of tables&\multirow{2}{4cm}{\centering if there are tables or figures in the main body}&\\\cline{1-1}
+List of figures&&\\\cline{1-2}
+Nomenclature&optiona\\\cline{1-2}\cline{4-4}
+Blank page&&&None\\\cline{1-2}\cline{4-4}
+Main body&&&\multirow{4}{2.5cm}{1, 2, 3, 4, \(\cdots\)}\\\cline{1-2}
+Reference&\\\cline{1-2}
+Appendices&optional&\\\cline{1-2}
+index&optional&\\\hline
+\end{tabular}
+\caption{Organizing and formatting thesis/dissertation}
+\label{tab:Organizing and formatting}
+\end{table}
+
+%%
+\section{Fonts and Size}\label{sec:font}
+
+The default font size is set to 11pt.
+In \LaTeX you can use commands like \verb|\normalsize|, \verb|\large|, \verb|\Large|, \verb|\LARGE|, \verb|\huge|, and so on, to specify the size of the font.
+We relate the above commands to 11pt, 14pt, 16pt, 18pt and 21pt, respectly, of the MS word templete.
+Thus, there are slight differences of font size in MS word templete and in \LaTeX templete.
+The below (Table \ref{tab:font size}) is the comparison table for the font size.
+\footnote{\url{https://tug.org/texinfohtml/latex2e.html#Font-sizes}}
+\begin{table}[h]\centering
+\begin{tabular}{>{\centering\arraybackslash}p{6cm}cc}
+\hline
+&Size Requirements&\LaTeX Style\\\hline
+Thesis title			&21&\verb|\huge|\\\hline
+The school name (Graduate School, Korea University)
+					&18&\verb|\LARGE|\\\hline
+All other parts are 16 points (department, name, advisor, master's thesis, \(\cdots\), submitted, \(\cdots\) completed, etc.)	
+					&16&\verb|\Large|\\\hline
+Year, month and day	&14&\verb|\large|\\\hline
+Main Text			&10--12&\verb|\normalsize|\\\hline
+Heading				&None&\\\hline
+Figure caption			&None&\\\hline
+Table caption			&None&\\\hline
+\end{tabular}
+\caption{Requirement for font size and the style used in this manuscript}\label{tab:font size}
+\end{table}
+
+%\begin{tabular}{ccc}
+%MS word templete&\LaTeX commands&\LaTeX templete\\\hline
+%11pt&\verb|\normalsize|&10.95pt\\
+%14pt&\verb|\large|&12pt\\
+%16pt&\verb|\Large|&14.4pt\\
+%18pt&\verb|\LARGE|&17.28\\
+%21pt&\verb|\huge|&20.74\\
+%\end{tabular}
+%\caption{Font sizes}\label{tab:font size}
+
+Here is how we put tables and footnote in \LaTeX.
+To typeset a table, use the environment \texttt{tabular} and specify the columns.
+The above table has three center-aligned columns ;
+\begin{verbatim}
+\begin{tabular}{ccc} ... \end{tabular}
+\end{verbatim}
+You can also use advanced version of \texttt{tabular}, which are \texttt{taubularx}, \texttt{tabulary}, \texttt{tabu}, to manipulate the typeset of tables.
+
+It is desirable to put the \texttt{tabular} environment inside the \texttt{table} environment.
+You can add caption by \verb|\caption{...}|.
+The labeling \verb|\label{...} | for future reference should be followed just after the caption.
+All the tables in the \texttt{table} environment will be included in the `List of Tables`.
+
+%%
+\section{Figures and Equations}\label{sec:figures_and_equations}
+
+To include the figure file in the document, you can use \texttt{includegraphics} command, which require \texttt{graphicx} package.
+\begin{verbatim}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{verbatim}
+You can specify the width or the height of the figure inside the square brackets and the file name (with or without the extension) inside the braces.
+
+It is desirable to put the \texttt{includegraphics} command inside the \texttt{figure} environment.
+Again, the labeling need to be followed just after the caption.
+All the tables in the \texttt{table} environment will be included in the `List of Tables'.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=.2\textwidth]{kumark.png}
+\end{center}
+\caption{Korea University Global Symbol}
+\label{fig:kumark}
+\end{figure}
+
+You can type an equation with inline math mode like \(E=mc^2\). %or $E=mc^2$.
+Or you can type
+\[E=mc^2\]
+%$$E=mc^2.$$
+%\begin{equation*}
+%E=mc^2
+%\end{equation*}
+to express the equation in display math mode.
+The above equation is an unnumbered.
+To number the equation automatically, you can use \texttt{equation} environment;
+\begin{equation}
+E=mc^2
+\end{equation}
+The number or the tag of the above equation reads `the first eqeuation of the section \ref{sec:figures_and_equations}'.
+If you add one more equation, you can get the second eqaution of the section \ref{sec:figures_and_equations}.
+\begin{equation}
+e^{i\theta}=\cos\theta+i\sin\theta.
+\end{equation}
+You can also specify tha tagging explicitly by
+\[E=mc^2\tag{$*$}\]
+
+To express a list of equations, you can use the \texttt{gather} environment, which just enumerate equations vertically.
+For example, suppose that you want to express a system of linear equations \(x+y+z=3\), \(x-y+2z=1\), \(x+3z=2\).
+\begin{gather}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2,
+\end{gather}
+If you want to unnumber the equations, use \texttt{gather*} environment;
+\begin{gather*}
+x+y+z=3\\
+x-y+2z=1\\
+x+3z=2,
+\end{gather*}
+Note that the above system is not well aligned.
+To align the equations horizontally, with respect to the equality sign, you can use \texttt{align} (or \texttt{align*}) environment
+\begin{align*}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align*}
+\texttt{align} environment (instead of \texttt{align*} environment) tags every equation of the system
+\begin{align}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{align}
+If you want one tagging for the system, you can use the \texttt{aligned} environment and the \texttt{equation} environment, simultaneously
+\begin{equation}\label{eq:system}
+\begin{aligned}
+x+y+z&=3\\
+x-y+2z&=1\\
+x+3z&=2
+\end{aligned}
+\end{equation}
+Finally, you can label and refer an equation, by \verb|\label{...}| and \verb|\eqref{...}|.
+For example, you can say that `The root of \eqref{eq:system} is \(x=2\), \(y=1\), \(z=0\)'.
+
+The environments \texttt{align}, \texttt{gather} and others, are the environments provided by the \texttt{amsmath} package.
+For more information to typeset the equation neatly, refer to \url{http://www.ams.org/arc/tex/amsmath/amsldoc.pdf}.
+
+%%%
+\chapter{Discussion}\label{chap:discussion}
+Discussion starts here.
+
+%%%
+\chapter{Conclusion}\label{chap:conclusion}
+Conclusion starts here. 
+
+
+\renewcommand\bibname{Reference(or Bibliography)}
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{AA}
+\bibitem{LSTM} Hochreiter, Sepp, and Jürgen Schmidhuber. ``Long short-term memory.'' Neural computation 9.8 (1997): 1735-1780.
+\end{thebibliography}
+
+%Reference starts here.
+%
+%References are a detailed list of sources that are cited in your thesis/dissertation. A bibliography is a detailed list of references cited in your thesis/dissertation plus background or other material you have read but have not actually cited.
+%
+%References should be prepared in a consistent format using bibliographic management tools (Endnote, Mendeley, etc.) in the order of author name or citation according to your academic field.
+%
+%Bibliographic management tools
+%\begin{itemize}
+%\item\url{https://library.korea.ac.kr/research/writing-guide/endnote/}
+%\item\url{https://library.korea.ac.kr/research/writing-guide/mendeley/}
+%\end{itemize}
+\newpage
+\begin{center}
+\large
+Appendices or supplementary materials
+\end{center}
+\chapter*{A. Appendix Title}
+%Appendices or supplementary materials are optional.
+%
+%It is customary to use capital letters (A, B, C...) for the sections in the appendices.
+
+\newpage
+\begin{center}
+\large
+Index
+
+\end{center}
+\normalsize
+Index starts here if required.
+
+\end{document}
+
